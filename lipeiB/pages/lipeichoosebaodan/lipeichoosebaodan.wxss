@@ -1,0 +1,34 @@
+/* pages/lipeichoosebaodan/lipeichoosebaodan.wxss */
+@import "/static/css/lipei-common.wxss"
+@import "/static/css/baodan-item.wxss"
+.choose-container{
+	background-color: #f5f5f5;
+}
+.baodan-items{
+	padding-top: 0;
+}
+.applyLipei{
+	height:54rpx;
+	width:172rpx;
+	line-height:54rpx;
+	text-align:center;
+	color:#9e9e9e;
+	border:2rpx solid #9e9e9e;
+	border-radius:27rpx;
+	margin-right: 30rpx;
+}
+.history_baodan{
+	width: 100%;
+	background-color: #fff;
+	text-align: right;
+	font-size: 28rpx;
+	color: #185DD0;
+	padding: 20rpx 74rpx 40rpx 0;
+	background-image: url(http://file.baozhixing.com/history_baodan.png);
+	background-repeat: no-repeat;
+	background-position: right 40rpx top 32rpx;
+	background-size: 34rpx 22rpx;
+}
+.applyLipei{
+	font-size: 28rpx;
+}

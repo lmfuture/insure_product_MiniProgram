@@ -1,0 +1,21 @@
+<!--components/xuzhi/xuzhi.wxml-->
+<!-- animation="{{animationData}}"-->
+<view class='xuzhi-container'>
+	<view class="content-dialog" hidden="{{hiddenKefu}}"  capture-catch:touchmove="preventdefault" bind:tap="clickCloseKefu" ></view>
+  <view class='kefu-content' id='kefu-content' hidden="{{hiddenKefu}}">
+    <view class='closeKefu' bind:tap="clickCloseKefu"></view>
+    <view class='kefu-title PFM'>客服咨询</view>
+    <view class='kefu-intruc'>
+      <view class='intruc-tip1'>产品条款看不懂？健康告知有疑问？</view>
+      <view class='intruc-tip2 PFM'>我们的顾问为您提供专业解答！</view>
+    </view>
+
+    <view class='qrcode-content'>
+      <view>
+        <image bindtouchstart='timestart' bindtouchend='timeend' bindtap='saveImg' data-src='http://file.baozhixing.com/IMG_1466.png' src='http://file.baozhixing.com/IMG_1466.png' style='height:360rpx;width:360rpx;'></image>
+      </view>
+    </view>
+    <view class='option-txt'>点击二维码长按保存</view>
+    <view class='copy_wechat'>复制微信号</view>
+  </view>
+</view>

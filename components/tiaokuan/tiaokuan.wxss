@@ -1,0 +1,84 @@
+/* components/xuzhi/xuzhi.wxss */
+@import "../../static/css/common-content-dialog.wxss";
+@import "../../animate.wxss";
+@import "../../app.wxss";
+
+.inner-content{
+	padding: 0;
+}
+.xuzhi-title-content{
+	height: 114rpx;
+	padding-bottom: 30rpx;
+	padding: 40rpx 40rpx 0;
+	position: relative;
+}
+.btn-close-xuzhi{
+	height: 100%;
+	width: 100rpx;
+	position: absolute;
+	right: 0rpx;
+	top: 2rpx;
+	background-image: url(http://file.baozhixing.com/cancle@2x.png);
+	background-repeat: no-repeat;
+	background-size: 24rpx 24rpx;
+	background-position:right 40rpx center;
+}
+.xuzhi-title{
+	height: 44rpx;
+	line-height: 44rpx;
+	font-size:36rpx;
+	color: #282828;
+	display: flex;
+	padding: 0 40rpx;
+	padding-left: 0;
+}
+
+.xuzhi-zhu{
+	height: 30rpx;
+	line-height: 30rpx;
+	font-size:24rpx;
+	color: #9E9E9E;
+	display: flex;
+}
+.xuzhi-content-text{
+	position: absolute;
+	top: 114rpx;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0rpx 0 50rpx 0;
+	font-size:28rpx;
+	line-height:44rpx;
+	color: #636363;
+	text-align: justify;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+.title-container{
+	width: 100%;
+	border-bottom: 2rpx solid #ECECEC;
+	padding-bottom: 30rpx;
+}
+.xuzhi-content-text .tiaokuan-item{
+	height: 100rpx;
+	line-height: 100rpx;
+	font-size:32rpx;
+	color: #636363;
+	padding: 0 40rpx;
+	position: relative;
+}
+.tiaokuan-item::after{
+	content: "";
+	position: absolute;
+	width: 14rpx;
+    height: 14rpx;
+    border-top: 4rpx solid #959595;
+    border-right: 4rpx solid #959595;
+    transform: rotate(45deg);
+    right: 40rpx;
+    top: 50%;
+    margin-top:-8rpx; 
+}
+.tiankuan-bg{
+	background-color: #F5F5F5;
+}

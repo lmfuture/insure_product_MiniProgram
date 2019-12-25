@@ -1,0 +1,120 @@
+/* othersC/pages/Feedback/feedback.wxss */
+page{
+  background-color: #f5f5f5;
+}
+.feedback-continer{
+  width: 100%; 
+}
+.feedback-con{
+  background-color: #fff;
+  padding: 40rpx 40rpx 0rpx 40rpx;
+  margin-bottom: 20rpx;
+}
+.con-content{
+  padding-bottom:30rpx;
+}
+.feedback-con-title{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
+  color: #282828;
+  margin-bottom: 30rpx;
+}
+.feedback-textarea{
+  width: 100%;
+  min-height: 192rpx;
+  font-size: 32rpx;
+  line-height: 48rpx;
+  color: #282828;
+}
+.screenshot{
+  padding: 30rpx 0rpx;
+  background-color: #fff;
+}
+.title-con{
+  font-size: 28rpx;
+  color: #636363;
+  margin-bottom: 30rpx;
+}
+.title-con{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.image-container{
+	display: flex;
+	flex-flow: row wrap;
+}
+.upload-label{
+	height: 40rpx;
+	line-height: 40rpx;
+	margin-top: 30rpx;
+	margin-bottom: 30rpx;
+	font-size: 32rpx;
+	color: #636363;
+}
+.image-item{
+	height: 140rpx;
+	width: 140rpx;
+	margin-right: 20rpx;
+	position: relative;
+}
+.image-item-image{
+	height: 100%;
+	width: 100%;
+}
+.delete-image-btn{
+	width: 40rpx;
+	height: 40rpx;
+	border-radius: 50%;
+	position: absolute;
+	top: -10rpx;
+	right: -12rpx;
+	background-image: url(http://file.baozhixing.com/delete-upload.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+
+.concant-con{
+  padding: 40rpx 40rpx 40rpx;
+  background-color: #fff;
+}
+.concant-title{
+  font-size: 32rpx;
+  color: #282828;
+  line-height: 40rpx;
+  margin-bottom: 10rpx;
+}
+.concant-tip{
+  font-size: 24rpx;
+  color: #9E9E9E;
+  margin-bottom: 30rpx;
+}
+.info-item{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 40rpx;
+}
+.info-label{
+  width: 168rpx;
+  color: #636363;
+}
+.info-label{
+  color: #282828;
+}
+
+.tijiao{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius:10rpx;
+  background: #D8D8D8;
+  color: #fff;
+  font-size: 40rpx;
+  text-align: center;
+  margin-top: 185rpx;
+}

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText":"进度查询",
+  "enablePullDownRefresh":false
+}

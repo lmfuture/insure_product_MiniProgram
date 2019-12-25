@@ -1,0 +1,219 @@
+/* pages/product/anxin/anxinform/anxinform.wxss */
+.form-container{
+	width: 100%;
+	background-color: #f5f5f5;
+	display: block;
+	padding-bottom: 100rpx;
+}
+.form-content{
+	background-color: #fff;
+	padding: 0 40rpx;
+	width: 100%;
+	margin-bottom: 20rpx;
+	padding-top: 40rpx;
+}
+
+.form-title-container{
+	padding: 0 40rpx;
+	background-color: #fff;
+	margin-left: -4rpx;
+}
+
+.form-title{
+	padding: 0 4rpx;
+	display: inline-flex;
+	font-size: 40rpx!important;
+	line-height: 54rpx!important;
+	color: #282828;
+	font-family:PingFangSC-Medium;
+	background-position: bottom 0rpx left;
+	margin-top: 40rpx;
+}
+.form-title-common{
+	font-size: 32rpx;
+	color: #282828;
+	line-height: 40rpx;
+	font-family:PingFangSC-Medium;
+}
+
+.form-input-item{
+	display: flex;
+	flex-flow: row nowrap;
+	border-bottom: 2rpx solid #ECECEC;
+	width: 100%;
+	justify-content: space-between;
+	position: relative;
+	height:102rpx;
+}
+
+.info-content .form-input-item:last-child{
+	border-bottom: none;
+}
+
+.form-input-label{
+	display: flex;
+	width: 160rpx;
+	font-size: 32rpx;
+	color: #636363;
+	line-height: 100rpx;
+	height: 100rpx;
+}
+.form-input-value{
+	width: 470rpx;
+	font-size: 32rpx;
+	color: #282828;
+	display: flex;
+	overflow: hidden;
+	height: 100rpx;
+	align-items: center;
+}
+
+.form-input{
+	width: 470rpx;
+	font-size: 32rpx;
+	color: #282828;
+	border:none;
+	height: 40rpx;
+	display:flex;
+}
+
+.picker-select{
+	width: 100%;
+}
+.input-checkbox{
+	margin-right: 10rpx;
+}
+
+/*checkbox 选项框大小  */
+.form-input-item checkbox .wx-checkbox-input {
+  width: 26rpx;
+  height: 26rpx;
+  border: none;
+  opacity:0;
+  border:2rpx solid rgba(151,151,151,1);
+}
+.form-input-item checkbox-group checkbox{
+	position:absolute;
+	top:24rpx;
+}
+
+.checkbox{
+	color: #9e9e9e;
+	position: relative;
+}
+.check-input{
+	position: absolute;
+	width: 26rpx;
+  	height: 26rpx;
+  	border:2rpx solid #979797;
+  	top: 50%;
+  	margin-top: -13rpx;
+  	left: 0;
+}
+
+.check-input-active{
+	background-image: url(http://file.baozhixing.com/formcheck.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: left top;
+	border: none;
+}
+
+@import "/weui.wxss";
+.checkbox-text{
+	padding-left: 45rpx;
+}
+
+.picker{
+	height: 40rpx;
+	line-height: 40rpx;
+}
+
+.should_know{
+	padding: 0rpx 40rpx 20rpx;
+	font-size: 24rpx;
+	color: #636363;
+}
+.should_know .link{
+	color: #185DD0;
+}
+.should_know checkbox .wx-checkbox-input {
+	height: 30rpx;
+	width: 30rpx;
+}
+
+.form-footer{
+	height: 100rpx;
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	z-index: 1000;
+}
+.zixun,.kefu{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 128rpx;
+	padding-top: 12rpx;
+	position: relative;
+	border-top: 2rpx solid #ececec;
+}
+.zixun-icon,.kefu-icon{
+	height: 44rpx;
+	width: 44rpx;
+}
+.zixun-text,.kefu-text{
+	font-size: 24rpx;
+	line-height: 40rpx;
+	color: #282828;
+}
+.zixun::after{
+	position: absolute;
+	content: "";
+	right: 0;
+	top: 20rpx;
+	height: 60rpx;
+	width: 2rpx;
+	background-color: #ECECEC;
+}
+.kefu{
+	width:106rpx;
+}
+.product-price-content{
+	width: 242rpx;
+	padding-right: 30rpx;
+	border-top: 2rpx solid #ececec;
+	text-align: right;
+}
+.jine{
+	font-size: 28rpx;
+	color: #282828;
+	line-height: 100rpx;
+}
+.product-price-rmb{
+	font-size: 28rpx;
+	color: #F43C3C;
+	line-height: 100rpx;
+	margin:0 4rpx 0 12rpx;
+}
+.product-price-price{
+	font-size: 52rpx;
+	color: #F43C3C;
+	line-height: 100rpx;
+}
+.liji-toubao{
+	display: flex;
+	width: 285rpx;
+	justify-content: center;
+	align-items: center;
+	font-size: 36rpx;
+	color: #fff;
+	line-height: 100rpx;
+	background:linear-gradient(90deg,rgba(252,191,0,1) 0%,rgba(255,166,0,1) 100%);
+	border-top: 2rpx solid #FCBF00;
+}

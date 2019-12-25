@@ -1,0 +1,62 @@
+<!--components/xuzhi/xuzhi.wxml-->
+<!-- animation="{{animationData}}"-->
+<view class='xuzhi-container'>
+	<view class="content-dialog" hidden="{{hiddenEnsure}}"  capture-catch:touchmove="preventdefault" bind:tap="clickCloseEnsure"></view>
+	<view class="inner-content animated slideInUp"  hidden="{{hiddenEnsure}}">
+		<view class="xuzhi-title-content">
+			<text class="xuzhi-title PFM">保障详情</text>
+			<view class="btn-close-xuzhi" bind:tap="clickCloseEnsure"></view>
+		</view>
+		<view class="xuzhi-content-text">
+			<view class='ensure-product-base-info'>
+				<view class="ensure-product-base-info-item">
+					<view class="info-label PFM">投保年龄</view>
+					<view class="info-value">30天-65岁，最高可续报至100岁</view>
+				</view>
+
+				<view class="ensure-product-base-info-item">
+					<view class="info-label PFM">保障区域</view>
+					<view class="info-value">中国境内</view>
+				</view>
+
+				<view class="ensure-product-base-info-item">
+					<view class="info-label PFM">就诊医院</view>
+					<view class="info-value">二级及以上公立医院</view>
+				</view>
+			</view>
+
+
+			<view class="ensure-suport-content">
+				<view class="ensure-suport-item">
+					<view class="ensure-suport-item-title">
+						<view class="ensure-suport-label PFM">意外身故残疾</view>
+						<view class="ensure-suport-value">50万元</view>
+					</view>
+					<view>
+						被保险人遭受意外伤害事故，并自事故发生之日起 180 日内因该事故身故的，按意外伤害保险金额给付身故保险金； 被保险人遭受意外伤害事故，并自该事故发生之日起 180 日内因该事故造成伤残的，按给付比例乘以意外伤害保险金额给付伤残保险金。如第 180 日治疗仍未结束的，按当日的身体情况进行伤残鉴定，并据此给付伤残保险金。
+					</view>
+				</view>
+
+				<view class="ensure-suport-item">
+					<view class="ensure-suport-item-title">
+						<view class="ensure-suport-label PFM">意外身故残疾</view>
+						<view class="ensure-suport-value">50万元</view>
+					</view>
+					<view>
+						被保险人遭受意外伤害事故，并自事故发生之日起 180 日内因该事故身故的，按意外伤害保险金额给付身故保险金； 被保险人遭受意外伤害事故，并自该事故发生之日起 180 日内因该事故造成伤残的，按给付比例乘以意外伤害保险金额给付伤残保险金。如第 180 日治疗仍未结束的，按当日的身体情况进行伤残鉴定，并据此给付伤残保险金。
+					</view>
+				</view>
+				
+				<view class="ensure-suport-item">
+					<view class="ensure-suport-item-title">
+						<view class="ensure-suport-label PFM">意外身故残疾</view>
+						<view class="ensure-suport-value">50万元</view>
+					</view>
+					<view>
+						被保险人遭受意外伤害事故，并自事故发生之日起 180 日内因该事故身故的，按意外伤害保险金额给付身故保险金； 被保险人遭受意外伤害事故，并自该事故发生之日起 180 日内因该事故造成伤残的，按给付比例乘以意外伤害保险金额给付伤残保险金。如第 180 日治疗仍未结束的，按当日的身体情况进行伤残鉴定，并据此给付伤残保险金。
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

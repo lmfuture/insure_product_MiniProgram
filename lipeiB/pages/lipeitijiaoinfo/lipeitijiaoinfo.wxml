@@ -1,0 +1,43 @@
+<view class="choose-container">
+	<view class="progress-content">
+		<view class="progress-image">
+			<image class="lipei-image" src="http://file.baozhixing.com/lipei-tijiao.png"></image>
+		</view>
+		<view class="progress-text">
+			<view class="progress-text-active">选择保单</view>
+			<view class="progress-text-active">填写材料</view>
+			<view>提交申请</view>
+		</view>
+	</view>
+
+	<view class="lipeiresult">
+		<image class="success-icon" src="http://file.baozhixing.com/lipei_icon_success.png"></image>
+		<text class="success-title">理赔申请提交成功</text>
+		<text class="success-text">初审通过后会有客服与您联系，请保持手机畅通</text>
+		<view class="success-btn">
+			<view class='backtoindex'>返回首页</view>
+			<view class="backtojindu">进度查询</view>
+		</view>
+	</view>
+
+	<view class="lipei-liucheng">
+		<view class="lc-title">
+			理赔流程
+		</view>
+
+		<view class="lipei-progress-text">
+			<view class="progress-list">
+				<view class="progress-list-title">平台初审</view>
+				<view class="progress-list-text">平台会在第一时间审核您的材料，如果有问题会通知您进行修改</view>
+			</view>
+			<view class="progress-list">
+				<view class="progress-list-title">保险公司复审</view>
+				<view class="progress-list-text">初审通过后，我们会通知您寄送材料给保险公司，并给出理赔金额</view>
+			</view>
+			<view class="progress-list">
+				<view class="progress-list-title">结案</view>
+				<view class="progress-list-text">保险公司会在7个工作日内，将理赔金打到您的银行卡上</view>
+			</view>
+		</view>
+	</view>
+</view>

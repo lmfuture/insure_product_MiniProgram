@@ -1,0 +1,44 @@
+<!--othersC/pages/Feedback/feedback.wxml-->
+<view class='feedback-continer'>
+  <view class='feedback-con'>
+    <view class='border2EC con-content'>
+      <view class='feedback-con-title PFM'>反馈内容</view>
+        <textarea class='feedback-textarea' placeholder="请具体描述出现的问题（不少于10个字）" placeholder-class='placeholderColor' auto-height maxlength='10000'></textarea>
+    </view>
+
+    <view class='screenshot'>
+      <view class='title-con'>
+        <view class='screenshot-title'>相关问题截图（选填）</view>
+        <view>2/4</view>
+      </view>
+      <view class="image-container">
+            <view class="image-item">
+                <view class="delete-image-btn"></view>
+                <image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+            </view>
+            <view class="image-item">
+                <image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+            </view>
+            <view bind:tap="uploadImage" class="upload-btn"></view>
+        </view>
+    </view>
+  </view>
+  <view class='concant-con'>
+    <view class='concant-title PFM'>联系方式</view>
+    <view class='concant-tip'>请预留正确的联系方式，方便我们跟您反馈问题进度</view>
+    <view class='concant-personInfo'>
+      <view class='info-item'>
+        <view class='info-label'>联系人</view>
+        <view class='info-value'>王帆</view>
+      </view>
+      <view class='info-item'>
+        <view class='info-label'>联系方式</view>
+        <view class='info-value'>18511164375</view>
+      </view>
+    </view>
+    <view class='tijiao PFM'>
+    确认提交
+    </view>
+  </view>
+    
+</view>

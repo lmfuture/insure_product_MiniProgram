@@ -1,0 +1,365 @@
+/* pages/yuhebao/yuhebao.wxss */
+page{
+	background-color: #f8f8f8;
+}
+.container{
+	padding-top: 30rpx;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-bottom: 40rpx;
+}
+
+.fadeInUp{
+	animation-duration: 0.8s;
+}
+
+
+.yuhebao-intruc{
+	width: 100%;
+	height: 152rpx;
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	padding-top: 30rpx;
+	margin-bottom: 40rpx;
+}
+.intruc-title{
+	width: 100%;
+	height: 106rpx;
+	padding: 20rpx 20rpx 0 140rpx;
+	background:linear-gradient(360deg,rgba(24,93,208,1) 0%,rgba(112,118,252,1) 100%);
+	border-radius:57px;
+	font-size:28rpx;
+	line-height:34rpx;
+	color: #fff;
+}
+
+.intruc-service-person{
+	width: 120rpx;
+	height: 152rpx;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.leftWhite{
+	padding: 30rpx 30rpx 32rpx;
+	background-color: #fff;
+	border-radius:0px 30rpx 30rpx 30rpx;
+	margin-bottom: 40rpx;
+}
+
+.problem{
+	display: flex;
+	line-height: 40rpx;
+	font-size: 32rpx;
+	color: #636363;
+	margin-bottom: 20rpx;
+}
+.sex-items{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+}
+.sex-man,.sex-woman{
+	height: 54rpx;
+	line-height: 54rpx;
+	width: 150rpx;
+	text-align: center;
+	font-size: 28rpx;
+	color: #9E9E9E;
+	border-radius:27rpx;
+	border:2rpx solid rgba(236,236,236,1);
+}
+.sex-man{
+	margin-right: 20rpx;
+}
+.btn_active{
+	border:none!important;
+	background:linear-gradient(90deg,rgba(252,191,0,1) 0%,rgba(255,166,0,1) 100%);
+	color: #fff!important;
+}
+.rightYellow{
+	padding: 30rpx 30rpx;
+	line-height: 40rpx;
+	background:rgba(255,166,0,1);
+	border-radius:30rpx 0rpx 30rpx 30rpx;
+	color: #fff;
+	font-size: 32rpx;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+.choose-sex{
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 80rpx;
+}
+.birthday-con{
+	width:100%;
+	height:176rpx;
+	background:rgba(255,255,255,1);
+	border-radius:0px 30rpx 30rpx 30rpx;
+	background-color: #fff;
+	margin-top: 40rpx;
+	padding: 30rpx 30rpx 32rpx;
+	margin-bottom: 40rpx;
+}
+.pickerBirth{
+	width:150rpx;
+	height:54rpx;
+	border-radius:27rpx;
+	border:2rpx solid rgba(236,236,236,1);
+	color: #9E9E9E;
+	font-size: 28rpx;
+	line-height: 54rpx;
+	text-align: center;
+}
+.bbrBir{
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 80rpx;
+}
+.jibing-items{
+	/*display: flex;*/
+	flex-flow: row nowrap;
+}
+.jibing-item{
+
+	padding: 10rpx 30rpx;
+	border:2rpx solid #ECECEC;
+	font-size: 28rpx;
+	color: #9E9E9E;
+	display: inline-flex;
+	line-height: 34rpx;
+	border-radius: 27rpx;
+	margin-right: 20rpx;
+	margin-bottom: 20rpx;
+}
+.jibing-bottom{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	margin-top: 40rpx;
+}
+.qita{
+	line-height: 54rpx;
+	font-size: 28rpx;
+	color: #185DD0;
+	border:2rpx solid rgba(24,93,208,1);
+	height: 54rpx;
+	width: 172rpx;
+	text-align: center;
+	border-radius: 27rpx;
+}
+.selectAll{
+	line-height: 54rpx;
+	font-size: 28rpx;
+	color: #FFA600;
+	border:2rpx solid #FFA600;
+	height: 54rpx;
+	width: 172rpx;
+	text-align: center;
+	border-radius: 27rpx;
+}
+.jibing-content{
+	margin-bottom: 40rpx;
+}
+.result-jibing{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	margin-bottom: 80rpx;
+
+}
+.huanbing-item{
+	width: 442rpx;
+	padding-left: 42rpx;
+	line-height: 40rpx;
+	margin-bottom: 10rpx;
+	position: relative;
+}
+.huanbing-item::after{
+	content:"";
+	position: absolute;
+	height: 12rpx;
+	width: 12rpx;
+	border-radius: 50%;
+	background-color: #fff;
+	left: 10rpx;
+	top: 14rpx;
+}
+.problem-item-jibing{
+	color: #ffa600;
+}
+.recommend_container{
+	background-color: #fff;
+	width: 100%;
+	border-radius: 30rpx;
+	box-shadow:0px 4px 12px 0px rgba(0,0,0,0.12);
+}
+.recommend_title{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	height: 104rpx;
+	width: 100%;
+	background:linear-gradient(360deg,rgba(24,93,208,1) 0%,rgba(112,118,252,1) 100%);
+	border-radius:30rpx 30rpx 0px 0px;
+	position: relative;
+}
+.title_text{
+	color: #fff;
+	line-height: 44rpx;
+	font-size: 36rpx;
+}
+
+.reset_hebao{
+	position: absolute;
+	right:30rpx;
+	color:rgba(255,255,255,0.8);
+	font-size: 24rpx;
+}
+.recomend_resolve{
+	padding:40rpx 30rpx 30rpx;
+}
+.resolve_item{
+	padding-left: 32rpx;
+	font-size: 32rpx;
+	line-height: 40rpx;
+	color: #636363;
+	position: relative;
+	margin-bottom: 30rpx;
+}
+.resolve_item:last-child{
+	margin-bottom: 0;
+}
+.resolve_item::after{
+	content:"";
+	position: absolute;
+	height: 12rpx;
+	width: 12rpx;
+	border-radius: 50%;
+	top: 14rpx;
+	left: 0;
+	background-color: #ffa600;
+}
+.resolve_item_title{
+	color: #ffa600;
+}
+
+.recomend_products{
+	padding: 30rpx 30rpx 0;
+}
+.products_title{
+	color: #282828;
+	font-size: 28rpx;
+	line-height: 34rpx;
+}
+.products_list{
+	padding: 30rpx 0;
+	border-bottom: 2rpx solid #ececec;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+.products_list:last-child{
+	border-bottom: none;
+}
+.product_image{
+	display: flex;
+	height: 140rpx;
+	width: 140rpx;
+	border-radius: 10rpx;
+}
+.product_info{
+	width: 450rpx;
+}
+.product_title{
+	font-size: 32rpx;
+	color: #282828;
+	line-height: 40rpx;
+	margin-bottom: 12rpx;
+}
+.product_tags{
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	margin-bottom: 20rpx;
+}
+.product_tag{
+	font-size: 20rpx;
+	height: 32rpx;
+	line-height: 32rpx;
+	padding: 0 10rpx;
+	color: #FFA600;
+	background-color: #FFF8E9;
+	margin-right: 10rpx;
+}
+.product_tag:last-child{
+	margin-right: 0rpx;
+}
+.product_price{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	height: 36rpx;
+	width: 100%;
+}
+.text1{
+	font-size: 20rpx;
+	color: #F43C3C;
+	margin-right: 6rpx;
+	line-height: 20rpx;
+}
+.text2{
+	font-size: 36rpx;
+	color: #F43C3C;
+	line-height: 36rpx;
+}
+.text3{
+	font-size: 20rpx;
+	color: #9E9E9E;
+	margin-left: 6rpx;
+}
+
+.product_sale{
+	display: flex;
+	height: 36rpx;
+	font-size: 24rpx;
+	color: #9E9E9E;
+	line-height: 36rpx;
+	padding-top: 8rpx;
+}
+
+.recomend_bottom{
+	padding: 30rpx 0;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+.recomend_tip{
+	font-size:28rpx;
+	color: #9E9E9E;
+	line-height:34rpx;
+	margin-bottom: 30rpx;
+}
+.yuyue{
+	width:228rpx;
+	height:54rpx;
+	border-radius:29rpx;
+	border:2rpx solid rgba(24,93,208,1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #185DD0;
+}
+
+
+
+
+
+

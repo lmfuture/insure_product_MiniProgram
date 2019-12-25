@@ -1,0 +1,15 @@
+<!--productA/pages/paysuccess/paysuccess.wxml-->
+<view class='payStateView'>
+  <view class='payState'>
+    <view class='payStateIcon'>
+      <image src='http://file.baozhixing.com/paystatesuccess.png'></image>
+      <text>支付成功</text>
+    </view>
+    <view class='payMoney'>¥775.00</view>
+    <view class='payHint'>您已成功投保，可在我的保单中查看订单详情</view>
+  </view>
+  <view class='payStateBtn'>
+    <view class='payStateMessage' bindtap="jumpBtn">订单详情</view>
+    <view class='payStateBack'>返回首页</view>
+  </view>
+</view>

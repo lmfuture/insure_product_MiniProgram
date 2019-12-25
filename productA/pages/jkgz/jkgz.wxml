@@ -1,0 +1,26 @@
+<!--pages/jkgz/jkgz.wxml-->
+<view class="jkgz-container">
+	<view class="top-tip">
+		为保证被保人的保险权益，请认真阅读本页健康告知,确认被保人是否符合投保条件
+	</view>
+	<view class="container">
+		<view class="jkgz-title PFM">被保险人目前或过往未出现下列情况：</view>
+
+		<view class="jkgz-text">
+			1.被保险人曾向其他保险公司申请过重大疾病理赔或被其他保险公司拒保、加费、延期或以附加限制条件承保。
+		</view>
+	</view>
+</view>
+<view class="jkgz-footer {{isIpx?'fix-iphonex-button':''}}">
+	<view class="zixun">
+		<button open-type="contact" show-message-card style="display:flex;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;"></button>
+		<image class="zixun-icon" src="http://file.baozhixing.com/zixun.png"></image>
+		<text class='zixun-text'>咨询</text>
+	</view>
+	<view class="product-price-content" bind:tap="showError">
+		有部分问题
+	</view>
+	<view class="liji-toubao" bind:tap="toProductForm">
+		确认无上述问题
+	</view>
+</view>

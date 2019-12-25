@@ -1,0 +1,56 @@
+/* components/xuzhi/xuzhi.wxss */
+@import "../../static/css/common-content-dialog.wxss";
+@import "../../animate.wxss";
+@import "../../app.wxss";
+
+.xuzhi-title-content{
+	height: 154rpx;
+	padding-top: 40rpx;
+	padding-bottom: 30rpx;
+	border-bottom: 2rpx solid #ECECEC;
+	position: relative;
+}
+
+.btn-close-xuzhi{
+	height: 100%;
+	width: 100rpx;
+	position: absolute;
+	right: -40rpx;
+	top: 2rpx;
+	background-image: url(http://file.baozhixing.com/cancle@2x.png);
+	background-repeat: no-repeat;
+	background-size: 24rpx 24rpx;
+	background-position:right 40rpx center;
+}
+.xuzhi-title{
+	height: 44rpx;
+	line-height: 44rpx;
+	font-size:36rpx;
+	color: #282828;
+	display: flex;
+	margin-bottom: 10rpx;
+}
+.xuzhi-zhu{
+	height: 30rpx;
+	line-height: 30rpx;
+	font-size:24rpx;
+	color: #9E9E9E;
+	display: flex;
+}
+.xuzhi-content-text{
+	position: absolute;
+	top: 154rpx;
+	bottom: 0;
+	left: 40rpx;
+	right: 40rpx;
+	font-size:28rpx;
+	line-height:44rpx;
+	color: #636363;
+	padding-top: 30rpx;
+	text-align: justify;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+.xuzhi-content-text view{
+	margin-bottom: 30rpx;
+}

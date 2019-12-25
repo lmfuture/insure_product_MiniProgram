@@ -1,0 +1,108 @@
+/* components/xuzhi/xuzhi.wxss */
+@import "../../static/css/common-content-dialog.wxss";
+@import "../../animate.wxss";
+@import "../../app.wxss";
+
+.inner-content{
+	padding: 0;
+	padding: 0 40rpx;
+}
+
+.xuzhi-title-content{
+	height: 114rpx;
+	padding-top: 40rpx;
+	padding-bottom: 30rpx;
+	border-bottom: 2rpx solid #ECECEC;
+	position: relative;
+}
+.btn-close-xuzhi{
+	height: 100%;
+	width: 100rpx;
+	position: absolute;
+	right: -40rpx;
+	top: 2rpx;
+	background-image: url(http://file.baozhixing.com/cancle@2x.png);
+	background-repeat: no-repeat;
+	background-size: 24rpx 24rpx;
+	background-position:right 40rpx center;
+}
+.xuzhi-title{
+	height: 44rpx;
+	line-height: 44rpx;
+	font-size:36rpx;
+	color: #282828;
+	display: flex;
+}
+.xuzhi-zhu{
+	height: 30rpx;
+	line-height: 30rpx;
+	font-size:24rpx;
+	color: #9E9E9E;
+	display: flex;
+}
+.xuzhi-content-text{
+	position: absolute;
+	top: 114rpx;
+	bottom: 0;
+	padding: 0rpx 40rpx 50rpx 0;
+	font-size:28rpx;
+	line-height:44rpx;
+	color: #636363;
+	text-align: justify;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+.xuzhi-content-text .problems-item{
+	padding: 30rpx 0rpx;
+	border-bottom: 2rpx solid #ECECEC;
+}
+.question{
+	display: flex;
+	flex-flow: row nowrap;
+	margin-bottom: 30rpx;
+}
+.question-icon{
+	height: 32rpx;
+	width: 32rpx;
+	border-radius: 50%;
+	background: #FFA600;
+	line-height: 32rpx;
+	text-align: center;
+	color: #fff;
+	font-size: 24rpx;
+}
+.question-text{
+	height: 32rpx;
+	line-height: 32rpx;
+	color: #282828;
+	font-size: 28rpx;
+	margin-left: 20rpx;
+}
+.answer{
+	display: flex;
+}
+.answer-icon{
+	height: 32rpx;
+	width: 32rpx;
+	border-radius: 50%;
+	line-height: 32rpx;
+	text-align: center;
+	color: #FFA600;
+	font-size: 24rpx;
+	border:2rpx solid #FFA600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.answer-text{
+	line-height: 32rpx;
+	color: #282828;
+	font-size: 28rpx;
+	margin-left: 20rpx;
+	text-align: justify;
+	display: flex;
+	flex-wrap: wrap;
+	width: 92%;
+	color: #636363;
+}
+

@@ -1,0 +1,78 @@
+.baodan-items{
+	padding-top: 88rpx;
+	background-color: #f5f5f5;
+}
+.baodan-item{
+	background-color: #fff;
+	padding: 20rpx 40rpx 0;
+	margin-bottom: 20rpx;
+}
+.baodan-item-top{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	height: 80rpx;
+	line-height: 80rpx;
+}
+.productName{
+	font-size: 32rpx;
+}
+.orderStatus{
+	font-size:28rpx;
+	color:rgba(158,158,158,1);
+}
+.baodan-item-centent{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: 20rpx 0;
+}
+.orderYhumbir{
+	height: 140rpx;
+	width: 140rpx;
+}
+.baodan-center-content-left{
+	color: #636363;
+	font-size:28rpx;
+	line-height: 34rpx;
+	margin-bottom: 20rpx;
+}
+.baodan-center-content-left{
+	display: flex;
+	flex-flow: row nowrap;
+}
+.center-left{
+	width: 140rpx;
+}
+.center-right{
+	width: 300rpx;
+}
+.baodan-item-bottom{
+	height: 104rpx;
+	padding-top: 20rpx;
+	display: flex;
+	justify-content: flex-end;
+}
+.toOrderDetails{
+	height: 54rpx;
+	width: 172rpx;
+	line-height: 54rpx;
+	text-align: center;
+	color: #FFA600;
+	border:2rpx solid rgba(255,166,0,1);
+	border-radius: 27rpx;
+	font-size: 28rpx;
+}
+
+
+.status_class_bzz{
+	color: #9E9E9E;
+}
+
+.status_class_dxb{
+	color: #F43C3C;
+}
+
+.status_class_dzf{
+	color: #185DD0;
+}

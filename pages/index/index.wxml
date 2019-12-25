@@ -1,0 +1,192 @@
+<!--index.wxml-->
+<view class='scroll-view' scroll-top='{{scrollTop}}'>
+  <!--轮播-->
+      <view class="swiper-container">
+        <swiper 
+         autoplay="{{autoplay}}" 
+         class="slider-container"
+         bindchange="swiperChange"
+         indicator-color='#fff'
+         indicator-active-color='#fff'
+         skip-hidden-item-layout='true'
+         circular='true'>
+          <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item class="swiper-item" >
+              <image src="{{item}}" class="slide-image"/>
+            </swiper-item>
+          </block>
+        </swiper>
+        <view class="dots">
+          <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+          </block>
+        </view>
+      </view>
+
+  <view class="container">
+    
+      <!--首页功能菜单-->
+      <view class="function-meau">
+        <block wx:for="{{meau}}" wx:key="{{index}}">
+          <navigator url="{{item.jumpurl}}" open-type="navigate">
+              <view class="meau-item">
+                <button wx:if="{{item.text=='咨询'}}" open-type="contact" send-message-title='我的' show-message-card style="display:flex;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;"></button>
+                <image class="meau-image" mode='scaleToFill' src="{{item.image}}"></image>
+                <text class="meau-text">{{item.text}}</text>
+              </view>
+          </navigator>
+        </block>
+      </view>
+
+      <!--首页分类菜单-->
+      <view class="classifie classifie-page" id="classifie">
+        <view class='classif-parent'>
+          <text class='classif-item meau-active'>重疾险</text>
+          <text class='classif-item'>防癌险</text>
+          <text class='classif-item'>医疗险</text>
+          <text class='classif-item'>寿险</text>
+          <text class='classif-item'>医疗险</text>
+          <text class='classif-item'>寿险</text>
+          <text class='classif-item'>车险</text>
+        </view>
+        <view class="more-classif fixed-more">
+            <view class="zhankai" data-id="zhankai-fixed"  bind:tap="scrollToZero"></view>
+        </view>
+
+        <!--顶部弹框-->
+        <view class="dialog-meau-flex" bind:tap="closeDialog" capture-catch:touchmove="preventdefault" hidden="{{hiddenFixedMeau}}">
+        </view>
+        <view class='meau-fixed' hidden="{{hiddenFixedMeau}}" id="meau-fixed" catch:tap="returnFalse"  animation="{{animationData}}" >
+          <view class="meau-top-fixed">
+            <text class="meau-top-fixed-title PFM">选择种类</text>
+            <view class="meau-top-fixed-close" bind:tap="closeDialog"></view>
+          </view>
+          <view class="meau-fixed-meau">
+            <view class="meau-fixed-active">重疾险</view>
+            <view>防癌险</view>
+            <view>医疗险</view>
+            <view>寿险</view>
+            <view>综合意外险</view>
+            <view>旅行意外险</view>
+            <view>孕妇险</view>
+            <view>成人组合</view>
+            <view>儿童组合</view>
+          </view>
+        </view>
+
+        <view class='classif-child'>
+          <text class='classif-child-item PFM classif-child-item-active'>1000元预算</text>
+          <text class='classif-child-item PFM'>2000元预算</text>
+          <text class='classif-child-item PFM'>3000元预算</text>
+          <text class='classif-child-item PFM'>4000元预算</text>
+          <text class='classif-child-item PFM'>5000元预算</text>
+        </view>
+        <view class="classif-child-model">
+        </view>
+      </view>
+
+      <!--固定菜单-->
+      <view class="classifie classifie-fixed" hidden="{{meauFixed}}" style="">
+        <view class='classif-parent'>
+          <text class='classif-item meau-active'>重疾险</text>
+          <text class='classif-item'>防癌险</text>
+          <text class='classif-item'>医疗险</text>
+          <text class='classif-item'>寿险</text>
+          <text class='classif-item'>医疗险</text>
+          <text class='classif-item'>寿险</text>
+          <text class='classif-item'>车险</text>
+        </view>
+        <view class="more-classif fixed-more" style="right:40rpx;">
+            <view class="zhankai" data-id="zhankai-fixed"  bind:tap="scrollToZero"></view>
+        </view>
+
+        <view class='classif-child'>
+          <text class='classif-child-item PFM classif-child-item-active'>1000元预算</text>
+          <text class='classif-child-item PFM'>2000元预算</text>
+          <text class='classif-child-item PFM'>3000元预算</text>
+          <text class='classif-child-item PFM'>4000元预算</text>
+          <text class='classif-child-item PFM'>5000元预算</text>
+        </view>
+        <view class="classif-child-model" style="right:40rpx;">
+        </view>
+      </view>
+
+      <!--产品列表-->
+      <view class="poroductLists">
+        <block wx:for="{{productLists}}" wx:key="{{index}}">
+          <view class="product-item" bind:tap="toProductDetail">
+            <view class="product-item-left">
+              <view class="product-thumb-container">
+                <image class="product-thumb" src="https://pubsto.datebao.com/ladderUploads/1014/wap/少儿420-300.jpg" mode="aspectFill"></image>
+                <text class='product-xinpin'>新品</text>
+              </view>
+                <image class="product-insurance-logo" src="//files.huizecdn.com/file1/M00/3B/2B/wKgls1seJ1mAblGNAAAPICY-ZQM441.png" mode="widthFix"></image>
+            </view>
+            <view class="product-item-right">
+              <text class="product-title PFM">泰然定期寿</text>
+              <view class='product-tags'>
+                <text class="product-tag">多次赔付</text>
+                <text class="product-tag">3-50岁可买</text>
+              </view>
+              <text class="product-introduce">提供多种重疾保障，可选择附加投保人豁免保障，提供更大保障</text>
+              <view class="product-right-bottom">
+                <view class='product-rmb'>¥</view>
+                <view class="product-price">775.50</view>
+                <view class="product-qi">起</view>
+                <view class="product-ceping">测评</view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <!--精选文章-->
+      <view class='article-container'>
+        <text class='article-title PFM title-active'>帆哥讲保险</text>
+        <view class="article-items">
+          <block wx:for="{{productLists}}" wx:key="{{index}}">
+            <view class="article-item">
+              <view class="article-item-left">
+                <text class="article-item-title PFM">重疾险测评：瑞泰超级玛丽别出心裁了</text>
+                <view class="article-item-left-bot">
+                  <text class="article-bot-time">2019年2月18日</text>
+                  <text class="article-bot-tag">原创</text>
+                </view>
+              </view>
+              <view class="article-item-right">
+                <image class="article-thumb" src="http://file.baozhixing.com/WechatIMG2098.jpeg" mode="widthFix"></image>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <!--保险服务-->
+      <view class="service_container">
+        <text class='service-title PFM meau-active'>保险服务</text>
+        <view class="service-items">
+          <view class="service-baodan">
+            <text class="service-item-title">保单管理</text>
+            <text class="service-item-text">您的保险小管家</text>
+          </view>
+          <view class="service-jiance">
+            <text class="service-item-title">预核保检测</text>
+            <text class="service-item-text">投保无忧</text>
+          </view>
+        </view>
+      </view>
+
+      <!--保障课堂-->
+      <view class="ketang_container">
+        <text class='service-title PFM meau-active'>保障课堂</text>
+        <block wx:for="{{ketangLists}}" wx:key="{{index}}">
+          <view class="ketang-item">
+            <image class="ketang-item-image" src="http://file.baozhixing.com/ketang.jpeg"></image>
+            <view class="ketang-item-content">
+              <text class="ketang-item-title PFM">教你挑保险-老人组合方案</text>
+              <text class="ketang-item-text">想给父母选保险，又怕没办法通过保险公司核保？来教你给老人购进最全面的保障方案</text>
+            </view>
+          </view>
+        </block>
+      </view>
+  </view>
+</view>

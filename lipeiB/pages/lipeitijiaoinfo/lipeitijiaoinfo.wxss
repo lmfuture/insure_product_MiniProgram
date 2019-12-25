@@ -1,0 +1,104 @@
+/* pages/lipeiinputinfo/li'pei.wxss */
+@import "/static/css/lipei-common.wxss"
+@import "/static/css/baodan-item.wxss"
+.choose-container{
+	background-color: #f5f5f5;
+}
+.lipeiresult{
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	padding-top: 58rpx;
+	align-items: center;
+}
+.success-icon{
+	height: 118rpx;
+	width: 118rpx;
+	margin-bottom: 40rpx;
+}
+.success-title{
+	font-size:36rpx;
+	line-height:44rpx;
+	margin-bottom: 10rpx;
+}
+.success-text{
+	font-size:28rpx;
+	line-height:34rpx;
+	color: #9E9E9E;
+}
+.success-btn{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	padding-top: 50rpx;
+	margin-bottom: 70rpx;
+}
+.backtoindex,.backtojindu{
+	width: 236rpx;
+	height: 74rpx;
+	line-height: 74rpx;
+	text-align: center;
+	border-radius: 38rpx;
+	font-size: 28rpx;
+}
+.backtoindex{
+	border:2rpx solid rgba(255,166,0,1);
+	color: #FFA600;
+	margin-right: 40rpx;
+}
+.backtojindu{
+	color: #fff;
+	background:linear-gradient(90deg,rgba(252,191,0,1) 0%,rgba(255,166,0,1) 100%);
+}
+
+.lipei-liucheng{
+	background-color: #fff;
+}
+.lc-title{
+	text-align: center;
+	height: 80rpx;
+	line-height: 80rpx;
+	border-bottom: 2rpx solid #ECECEC;
+	position: relative;
+}
+.lc-title::after{
+	content:"";
+	position: absolute;
+	bottom:0;
+	width: 60rpx;
+	height: 4rpx;
+	background-color: #FFA600;
+	left: 50%;
+	margin-left: -30rpx;
+}
+
+.lipei-progress-text{
+	padding: 30rpx 40rpx 90rpx;
+}
+.progress-list{
+	margin-bottom: 30rpx;
+	padding-left: 34rpx;
+	position: relative;
+}
+.progress-list::before{
+	content:"";
+	position: absolute;
+	left: 0;
+	top: 14rpx;
+	height: 14rpx;
+	width: 14rpx;
+	border-radius: 50%;
+	background-color: #185DD0;
+}
+.progress-list-title{
+	height: 40rpx;
+	line-height: 40rpx;
+	font-size: 32rpx;
+	color: #282828;
+}
+.progress-list-text{
+	padding-top: 20rpx;
+	line-height: 34rpx;
+	color: #636363;
+	font-size: 28rpx;
+}

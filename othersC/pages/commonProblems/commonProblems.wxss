@@ -1,0 +1,118 @@
+/* othersC/pages/commonProblems/commonProblems.wxss */
+page{
+    padding-top: 94rpx;
+    padding-bottom: 100rpx;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+page{
+    background-color: #f5f5f5;
+}
+.weui-navbar{
+    margin-bottom: 20rpx;
+}
+
+.weui-navbar{
+    border-bottom:none;
+    height: 68rpx;
+    line-height: 68rpx;
+    position: fixed;
+    background-color: #fff;
+    overflow-x: auto;
+    -webkit-overflow-scrolling:touch;
+    justify-content: space-between;
+}
+.weui-navbar__item{
+    padding: 0;
+    color: #9E9E9E;
+    flex-basis: 150rpx;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+.weui-bar__item_on{
+    color: #282828!important;
+}
+.weui-navbar__slider{
+    width: 20px;
+    background-color: #FFA600;
+}
+.problems_container{
+    padding: 0 40rpx;
+    background-color: #fff;
+}
+
+.problems_container .problems-item{
+    padding: 30rpx 0rpx;
+    border-bottom: 2rpx solid #ECECEC;
+}
+.problems-item:last-child{
+    border-bottom:none;
+}
+.question{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 30rpx;
+}
+.question-icon{
+    height: 32rpx;
+    width: 32rpx;
+    border-radius: 50%;
+    background: #FFA600;
+    line-height: 32rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 24rpx;
+}
+.question-text{
+    height: 32rpx;
+    line-height: 32rpx;
+    color: #282828;
+    font-size: 28rpx;
+    margin-left: 20rpx;
+}
+.answer{
+    display: flex;
+}
+.answer-icon{
+    height: 32rpx;
+    width: 32rpx;
+    border-radius: 50%;
+    line-height: 32rpx;
+    text-align: center;
+    color: #FFA600;
+    font-size: 24rpx;
+    border:2rpx solid #FFA600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.answer-text{
+    line-height: 32rpx;
+    color: #282828;
+    font-size: 28rpx;
+    margin-left: 20rpx;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    width: 92%;
+    color: #636363;
+}
+
+.problems_footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #185DD0;
+}
+.zixun_icon{
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 10rpx;
+}

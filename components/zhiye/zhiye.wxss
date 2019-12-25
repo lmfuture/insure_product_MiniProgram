@@ -1,0 +1,208 @@
+/* components/zhiye/zhiye.wxss */
+@import "../../static/css/common-content-dialog.wxss";
+@import "../../animate.wxss";
+@import "../../app.wxss";
+
+.inner-content{
+	padding: 0;
+  overflow: hidden;
+}
+.xuzhi-title-content{
+	height: 114rpx;
+	padding-bottom: 30rpx;
+	padding: 40rpx 40rpx 0;
+	position: relative;
+}
+.title-container{
+  position: relative;
+}
+.title-container::after{
+  content: '';
+  width: 100%;
+  height: 2rpx;
+  background: #ECECEC;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.btn-close-xuzhi{
+	height: 100%;
+	width: 100rpx;
+	position: absolute;
+	right: 0rpx;
+	top: -15rpx;
+	background-image: url(http://file.baozhixing.com/cancle@2x.png);
+	background-repeat: no-repeat;
+	background-size: 24rpx 24rpx;
+	background-position:right center;
+}
+.xuzhi-title{
+	height: 44rpx;
+	line-height: 44rpx;
+	font-size:36rpx;
+	color: #282828;
+	display: flex;
+	padding: 0 40rpx;
+	padding-left: 0;
+}
+
+.xuzhi-zhu{
+	height: 30rpx;
+	line-height: 30rpx;
+	font-size:24rpx;
+	color: #9E9E9E;
+	display: flex;
+}
+.zhiye-content-text{
+	position: absolute;
+	top: 114rpx;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0rpx 0 0 0;
+	font-size:28rpx;
+	line-height:44rpx;
+	color: #636363;
+	text-align: justify;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+  background: #F5F5F5;
+}
+.title-container{
+	width: 100%;
+	border-bottom: 2rpx solid #ECECEC;
+	padding-bottom: 30rpx;
+}
+.zhiye-content-text .zhiye-item{
+	line-height: 100rpx;
+	font-size:32rpx;
+	color: #636363;
+	padding: 0 40rpx;
+	position: relative;
+  font-weight: normal;
+  margin-bottom:20px; 
+  background: #FFFFFF;
+}
+.zhiye-content-text .zhiye-item:last-child{
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+.zhiye-content-text .zhiye-item-active{
+  color: #282828;
+  font-weight: bold !important;
+}
+.zhiye-item-active::before{
+  content: "";
+	position: absolute;
+	width: 100%;
+  height: 2rpx;
+  background: #F5F5F5;
+  left: 0;
+  top: 98rpx;
+}
+.zhiye-item::after, .two-zhiye-item::after,.three-zhiye-item::after{
+	content: "";
+	position: absolute;
+	width: 14rpx;
+  height: 14rpx;
+  border-top: 4rpx solid #959595;
+  border-right: 4rpx solid #959595;
+  transform: rotate(45deg);
+  right: 40rpx;
+  top: 50rpx;
+  margin-top:-8rpx; 
+}
+.three-zhiye-item::after{
+  top: 40rpx;
+  right: 0;
+}
+.zhiye-item-active::after{
+  transform: rotate(135deg);
+}
+.zhiye-content-text .zhiye-item .two-zhiye-item{
+  position: relative;
+  font-weight: normal;
+  text-indent: 20rpx;
+}
+.zhiye-content-text .zhiye-item .three-zhiye-item{
+  text-indent: 40rpx;
+  font-size: 28rpx;
+  font-weight: normal;
+  line-height: 80rpx;
+  position: relative;
+}
+.zhiye-content-text .zhiye-item .four-zhiye-item{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  background: #ECECEC;
+  position: relative;
+  border-bottom: 2rpx dashed #E3E3E3;
+}
+.zhiye-content-text .zhiye-item .four-zhiye-item:last-child{
+  border-bottom: 0;
+}
+.zhiye-content-text .zhiye-item-active .four-zhiye-item{
+  border-bottom: 2rpx dashed #959595;
+}
+.zhiye-content-text .zhiye-item-active .four-zhiye-item:last-child{
+  border-bottom: 0;
+}
+.zhiye-content-text .zhiye-item .four-zhiye-item .paddingLeft{
+  width: 40rpx;
+  height: 80rpx;
+  position: absolute;
+  left: -40rpx;
+  background: #ECECEC;
+  display: block;
+  top: 0;
+}
+.zhiye-content-text .zhiye-item .four-zhiye-item .paddingRight{
+  width: 40rpx;
+  height: 80rpx;
+  position: absolute;
+  right: -40rpx;
+  background: #ECECEC;
+  display: block;
+  top: 0;
+}
+.zhiye-content-text .zhiye-item .four-zhiye-item view{
+  flex: 1;
+  font-size: 28rpx;
+  color: #636363;
+}
+.zhiye-content-text .zhiye-item .four-zhiye-item .levelStyle{
+  color: #185DD0;
+  text-align: right;
+}
+.zhiye-content-text .zhiye-item-active .two-zhiye-item{
+  color: #636363;
+}
+.zhiye-content-text .zhiye-item-active .three-zhiye-item{
+  color: #636363;
+  font-weight: normal !important;
+}
+.two-zhiye-item::after{
+  right: 0;
+}
+.zhiye-content-text .zhiye-item .two-zhiye-item::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2rpx;
+  background: #ECECEC;
+  top: 98rpx;
+  left: 0;
+}
+.zhiye-content-text .zhiye-item .three-zhiye-item::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2rpx;
+  background: #ECECEC;
+  top: 78rpx;
+  left: 0;
+}
+.tiankuan-bg{
+	background-color: #F5F5F5;
+}

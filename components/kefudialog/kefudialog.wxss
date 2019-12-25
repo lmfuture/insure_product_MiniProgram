@@ -1,0 +1,105 @@
+/* components/xuzhi/xuzhi.wxss */
+@import "../../static/css/common-content-dialog.wxss";
+@import "../../animate.wxss";
+@import "../../app.wxss";
+
+.content-dialog{
+  z-index: 1500;
+}
+.kefu-content{
+  width: 670rpx;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 40rpx;
+  right: 40rpx;
+  margin-top:-462rpx;
+  z-index: 2000;
+  border-radius:20rpx;
+  padding-top: 30rpx;
+  padding-bottom: 60rpx;
+}
+.kefu-title{
+  line-height: 64rpx;
+  font-size: 36rpx;
+  text-align: center;
+  color: #282828;
+}
+.kefu-intruc{
+  position: relative;
+  padding: 40rpx 0;
+  background-image: url(http://file.baozhixing.com/Line%205@2x.png);
+  background-repeat: no-repeat;
+  background-size: 636rpx 2rpx;
+  background-position: left 18rpx bottom;
+}
+.kefu-intruc::after{
+  content:"";
+  position: absolute;
+  background-color:#C6C6C6;
+  height: 36rpx;
+  width: 36rpx;
+  border-radius: 50%;
+  bottom: -18rpx;
+  left: -18rpx;
+}
+.kefu-intruc::before{
+  content:"";
+  position: absolute;
+  background-color:#C6C6C6;
+  height: 36rpx;
+  width: 36rpx;
+  border-radius: 50%;
+  bottom: -18rpx;
+  right: -18rpx;
+}
+.intruc-tip1{
+  color: #636363;
+  font-size: 32rpx;
+  line-height: 40rpx;
+  text-align: center;
+  margin-bottom: 14rpx;
+}
+.intruc-tip2{
+  color: #FFA600;
+  font-size: 32rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+.qrcode-content{
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  margin-bottom: 20rpx;
+}
+.option-txt{
+  text-align: center;
+  line-height: 34rpx;
+  font-size: 28rpx;
+  color: #9E9E9E;
+  margin-bottom: 60rpx;
+}
+.copy_wechat{
+  width: 470rpx;
+  height: 80rpx;
+  background:linear-gradient(90deg,rgba(252,191,0,1) 0%,rgba(255,166,0,1) 100%);
+border-radius:40rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+  margin-left: 100rpx;
+}
+
+.closeKefu{
+  height: 100rpx;
+  width: 100rpx;
+  position: absolute;
+  top: 13rpx;
+  right: 2rpx;
+  background-image: url(http://file.baozhixing.com/cancle@2x.png);
+  background-repeat: no-repeat;
+  background-size: 24rpx;
+  background-position: center;
+}

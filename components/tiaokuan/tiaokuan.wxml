@@ -1,0 +1,49 @@
+<!--components/xuzhi/xuzhi.wxml-->
+<!-- animation="{{animationData}}"-->
+<view class='xuzhi-container'>
+	<view class="content-dialog" hidden="{{hiddenTiaokuan}}"  capture-catch:touchmove="preventdefault" bind:tap="clickCloseTiaokuan"></view>
+	<view class="inner-content animated slideInUp"  hidden="{{hiddenTiaokuan}}">
+		<view class="xuzhi-title-content">
+			<view class="title-container">
+				<text class="xuzhi-title PFM">保险条款</text>
+				<view class="btn-close-xuzhi" bind:tap="clickCloseTiaokuan"></view>
+			</view>
+			
+		</view>
+		<view class="xuzhi-content-text">
+			<view class="tiaokuan-item">
+				平安个人意外伤害保险条款
+			</view>
+			<view class="tiaokuan-item tiankuan-bg">
+				平安个人意外伤害保险条款
+			</view>
+			<view class="tiaokuan-item">
+				平安个人意外伤害保险条款
+			</view>
+			<view class="tiaokuan-item tiankuan-bg">
+				平安个人意外伤害保险条款
+			</view>
+			<view class="tiaokuan-item">
+				平安个人意外伤害保险条款
+			</view>
+      <view class="tiaokuan-item">
+				平安个人意外伤害保险条款
+			</view>
+      <view class="tiaokuan-item">
+				平安个人意外伤害保险条款
+			</view>
+      <view class="tiaokuan-item">
+				平安个人意外伤害保险条款
+			</view>
+      <view class="tiaokuan-item">
+				平安个人意外伤害保险条款
+			</view>
+      <view class="tiaokuan-item">
+				平安个人意外伤害保险条款
+			</view>
+      <view class="tiaokuan-item">
+				平安个人意外伤害保险条款
+			</view>
+		</view>
+	</view>
+</view>

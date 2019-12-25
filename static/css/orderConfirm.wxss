@@ -1,0 +1,38 @@
+.orderConfirm-container{
+	background-color: #f5f5f5;
+	width: 100%;
+	height: 100%;
+}
+.orderInfo,userInfo{
+	background-color: #fff;
+	padding:40rpx 40rpx 0;
+	margin-bottom: 20rpx;
+}
+.info-title{
+	height: 40rpx;
+	line-height: 40rpx;
+	font-size: 32rpx;
+	color: #282828;
+  margin-bottom: 20rpx;
+}
+.productName{
+  height: 40rpx;
+	line-height: 40rpx;
+	font-size: 32rpx;
+	color: #282828;
+  margin-bottom: 20rpx;
+}
+.info-item{
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size:32rpx;
+}
+.info-item-label{
+  display: flex;
+  color:#636363;
+  width: 168rpx;
+}
+.info-item-value{
+  color:#282828;
+}

@@ -1,0 +1,75 @@
+<view class="weui-navbar">
+    <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on PFM' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+        </view>
+    </block>
+    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+</view>
+<!--优选推荐-->
+<view class="poroductLists youxuanLists">
+	<view class="youxuan PFM">
+		优选推荐
+	</view>
+	<block wx:for="{{productLists}}" wx:key="{{index}}">
+	  <view class="product-item border2EC" bind:tap="toProductDetail">
+	    <view class="product-item-left">
+	      <view class="product-thumb-container">
+	        <image class="product-thumb" src="https://pubsto.datebao.com/ladderUploads/1014/wap/少儿420-300.jpg" mode="aspectFill"></image>
+	        <text class='product-xinpin'>新品</text>
+	      </view>
+	        <image class="product-insurance-logo" src="//files.huizecdn.com/file1/M00/3B/2B/wKgls1seJ1mAblGNAAAPICY-ZQM441.png" mode="widthFix"></image>
+	    </view>
+	    <view class="product-item-right">
+	      <text class="product-title PFM">泰然定期寿</text>
+	      <view class='product-tags'>
+	        <text class="product-tag">多次赔付</text>
+	        <text class="product-tag">3-50岁可买</text>
+	      </view>
+	      <text class="product-introduce">提供多种重疾保障，可选择附加投保人豁免保障，提供更大保障</text>
+	      <view class="product-right-bottom">
+	      	<view class="product-right-price">
+	      		<view class='product-rmb'>¥</view>
+		        <view class="product-price">775.50</view>
+		        <view class="product-qi">起</view>
+	      	</view>
+	        <view class="sale-num">35120人已购</view>
+	      </view>
+	    </view>
+	  </view>
+	</block>
+</view>
+
+<!--热销产品-->
+<view class="poroductLists rexiaoLists">
+	<view class="rexiao PFM">
+		热销产品
+	</view>
+	<block wx:for="{{productLists}}" wx:key="{{index}}">
+	  <view class="product-item border2EC" bind:tap="toProductDetail">
+	    <view class="product-item-left">
+	      <view class="product-thumb-container">
+	        <image class="product-thumb" src="https://pubsto.datebao.com/ladderUploads/1014/wap/少儿420-300.jpg" mode="aspectFill"></image>
+	        <text class='product-xinpin'>新品</text>
+	      </view>
+	        <image class="product-insurance-logo" src="//files.huizecdn.com/file1/M00/3B/2B/wKgls1seJ1mAblGNAAAPICY-ZQM441.png" mode="widthFix"></image>
+	    </view>
+	    <view class="product-item-right">
+	      <text class="product-title PFM">泰然定期寿</text>
+	      <view class='product-tags'>
+	        <text class="product-tag">多次赔付</text>
+	        <text class="product-tag">3-50岁可买</text>
+	      </view>
+	      <text class="product-introduce">提供多种重疾保障，可选择附加投保人豁免保障，提供更大保障</text>
+	      <view class="product-right-bottom">
+	      	<view class="product-right-price">
+	      		<view class='product-rmb'>¥</view>
+		        <view class="product-price">775.50</view>
+		        <view class="product-qi">起</view>
+	      	</view>
+	        <view class="sale-num">35120人已购</view>
+	      </view>
+	    </view>
+	  </view>
+	</block>
+</view>

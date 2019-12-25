@@ -1,0 +1,128 @@
+<!--pages/product/anxin/orderDetails/orderDetails.wxml-->
+<view class="orderDetails-container">
+	<view class="product-info">
+		<view class="productName">
+			泰然定期寿
+		</view>
+		<view class="order_no">
+			<view>保单号：PEID20191101090014533</view>
+			<view class="copy">复制</view>
+		</view>
+		<view class="order_status">
+			<view>审核中</view>
+			<view class="order_time">2019-01-16 11:23:38</view>
+		</view>
+		<image class="insurance_logo" src="//files.huizecdn.com/file1/M00/3B/2B/wKgls1seJ1mAblGNAAAPICY-ZQM441.png"></image>
+	</view>
+
+  <view class='product_base_info'>
+     <view class="basw-info-title PFM">
+     	基本信息
+     </view>
+     <view class="base-info-item">
+     	<view class="base-info-item-label">保障期限</view>
+     	<view class="base-info-item-value">2019-04-17至2020-04-17</view>
+     </view>
+     <view class="base-info-item">
+     	<view class="base-info-item-label">份数</view>
+     	<view class="base-info-item-value">1份</view>
+     </view>
+     <view class="base-info-item">
+     	<view class="base-info-item-label">保费</view>
+     	<view class="base-info-item-value">775.50元</view>
+     </view>
+     <view class="base-info-item">
+     	<view class="base-info-item-label">电子保单</view>
+     	<view class="base-info-item-value">生成中…</view>
+     </view>
+  </view>
+
+  <view class='product_base_info'>
+     <view class="basw-info-title PFM">
+     	保障责任
+     </view>
+     <view class="suport-item">
+     	<view class="suport-item-label">恶性肿瘤医疗保障金</view>
+     	<view class="suport-item-value">10万元</view>
+     </view>
+     <view class="suport-item">
+     	<view class="suport-item-label">恶性肿瘤医疗保障金</view>
+     	<view class="suport-item-value">10万元</view>
+     </view>
+  </view>
+
+  <view class='product_base_info'>
+  	<view class="tbr_title">
+  		<view class='PFM'>投保人信息</view>
+  		<view class="open_tbr open">
+  			收起投保人信息
+  		</view>
+  	</view>
+  	<view class="base-info-item">
+     	<view class="base-info-item-label">投保人</view>
+     	<view class="base-info-item-value">高晓晓</view>
+     </view>
+     <view class="base-info-item">
+     	<view class="base-info-item-label">联系电话</view>
+     	<view class="base-info-item-value">13269994635</view>
+     </view>
+     <view class="base-info-item">
+     	<view class="base-info-item-label">证件号码</view>
+     	<view class="base-info-item-value">110104199612263620</view>
+     </view>
+     <view class="base-info-item">
+     	<view class="base-info-item-label">受益人</view>
+     	<view class="base-info-item-value">法定收益人</view>
+     </view>
+  </view>
+
+  <view class='product_base_info'>
+  	<view class="tbr_title">
+  		<view class='PFM'>被保人信息</view>
+  		<view class="open_tbr close">
+  			收起被保人信息
+  		</view>
+  	</view>
+  	<view class="base-info-item">
+     	<view class="base-info-item-label">被保人</view>
+     	<view class="base-info-item-value">高晓晓</view>
+     </view>
+     <view class="base-info-item">
+     	<view class="base-info-item-label">联系电话</view>
+     	<view class="base-info-item-value">13269994635</view>
+     </view>
+     <view class="base-info-item">
+     	<view class="base-info-item-label">证件号码</view>
+     	<view class="base-info-item-value">110104199612263620</view>
+     </view>
+     <view class="base-info-item">
+     	<view class="base-info-item-label">受益人</view>
+     	<view class="base-info-item-value">法定收益人</view>
+     </view>
+  </view>
+
+  <view class='product_base_info'>
+     <view class="basw-info-title PFM">
+     	理赔电话
+     </view>
+     <view class="base-info-item">
+     	<view class="base-info-item-label">保险公司</view>
+     	<view class="base-info-item-value">4008-120-120</view>
+     </view>
+     <view class="base-info-item">
+     	<view class="base-info-item-label">平台电话</view>
+     	<view class="base-info-item-value">4008-120-120</view>
+     </view>
+  </view>
+
+  <view class="order_bottom">
+  	<view class='checkXuzhi'>查看<text  bind:tap="showXuzhi">《投保须知》</text><text  bind:tap="showTiaokuan">《保险条款》</text></view>
+  </view>
+	<view class="anniu">
+		<view class="cancle_order">删除订单</view>
+		<view class="close_order">关闭</view>
+	</view>
+</view>
+
+<xuzhi hiddenXuzhi='{{showXuzhi}}'></xuzhi>
+<tiaokuan hiddenTiaokuan='{{showTiaokuan}}'></tiaokuan>

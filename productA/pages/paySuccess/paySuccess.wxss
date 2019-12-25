@@ -1,0 +1,2 @@
+/* productA/pages/paysuccess/paysuccess.wxss */
+@import "../../../static/css/pay-state.wxss";

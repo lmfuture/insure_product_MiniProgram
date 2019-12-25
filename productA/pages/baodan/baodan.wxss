@@ -1,0 +1,40 @@
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+page{
+	background-color: #f5f5f5;
+}
+.weui-navbar{
+	margin-bottom: 20rpx;
+}
+
+.weui-navbar{
+	border-bottom:none;
+	height: 68rpx;
+	line-height: 68rpx;
+	position: fixed;
+	background-color: #fff;
+	overflow-x: auto;
+	-webkit-overflow-scrolling:touch;
+    justify-content: space-between;
+}
+.weui-navbar__item{
+	padding: 0;
+	color: #9E9E9E;
+	flex-basis: 150rpx;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.weui-bar__item_on{
+	color: #282828!important;
+}
+.weui-navbar__slider{
+	width: 20px;
+	background-color: #FFA600;
+}
+@import '/static/css/baodan-item.wxss';

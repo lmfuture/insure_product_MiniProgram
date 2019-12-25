@@ -1,0 +1,149 @@
+<!--pages/lipeiinputinfo/li'pei.wxml-->
+<view class="choose-container">
+	<view class="progress-content">
+		<view class="progress-image">
+			<image class="lipei-image" src="http://file.baozhixing.com/lipei-tianxie.png"></image>
+		</view>
+		<view class="progress-text">
+			<view class="progress-text-active">选择保单</view>
+			<view class="progress-text-active">填写材料</view>
+			<view>提交申请</view>
+		</view>
+	</view>
+
+	<view class="form-content" style="padding-top:0;">
+		<view class="info-content">
+			<view class="form-input-item">
+				<view class="form-input-label">保险名称</view>
+				<view class="form-input-value">
+					<input class="form-input" value='泰然定期寿' name="" placeholder-class="placeholderColor" placeholder="请填写与身份证件相符的姓名" />
+				</view>
+			</view>
+			<view class="form-input-item list-item-right">
+				<view class="form-input-label">证件类型</view>
+				<view class="form-input-value">
+					<picker class="picker-select" bindchange='bindShiguTypeChange' range="{{shigu}}">
+					    <view class="picker" style="color:{{shiguTypeDefaultColor}};">
+					      {{shigu_text}}
+					    </view>
+					</picker>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="form-content">
+		<view class="info-content">
+			<view class="form-title-common">事件描述</view>
+			<view class="form-input-item list-item-right">
+				<view class="form-input-label">发生时间</view>
+				<view class="form-input-value">
+					<picker
+						class="picker-select"
+					    mode="date"
+					    value="{{shigu_time}}"
+					    start="1990-01-01"
+					    end="2100-01-01"
+					    bindchange="bindShiguTime"
+					  >
+					    <view class="picker" style="color:{{shiguTimeDefaultColor}};">
+						   {{shigu_time}}
+						</view>
+					</picker>
+				</view>
+			</view>
+			<view class="form-input-item">
+				<view class="form-input-label">发生地点</view>
+				<view class="form-input-value">
+					<input class="form-input" value='' name="" placeholder-class="placeholderColor" placeholder="请填写事故发生地点" />
+				</view>
+			</view>
+
+			<view style="padding-bottom:30rpx;">
+				<view class="form-input-label" style="height:90rpx;">事件经过</view>
+				<!-- <view class="form-input-value" style="height: initial!important;">
+					<textarea placeholder="请详细描述事件经过" auto-height class="shijian_progress" name="textarea" placeholder-class="placeholderColor"/>
+				</view> -->
+				<view>
+					<textarea contenteditable="true" contenteditable="true" auto-height="true" class='shijian_progress' name='commentValue' placeholder='请详细描述事件经过' placeholder-style='font-size:30rpx;' style="width:100%;margin-left:{{detail ? '-8rpx!important;':'0rpx!important;'}}"></textarea>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="form-content">
+		<view class="info-content">
+			<view class="form-title-common">上传材料</view>
+
+
+			<view class="upload-content border2EC">
+				<view class="upload-label">被保人身份证正反面</view>
+				<view class="image-container">
+					<view class="image-item">
+						<view class="delete-image-btn"></view>
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view class="image-item">
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view bind:tap="uploadImage" class="upload-btn"></view>
+				</view>
+			</view>
+
+
+			<view class="upload-content border2EC">
+				<view class="upload-label">门诊病历（封面及医生诊断书）</view>
+				<view class="image-container">
+					<view class="image-item">
+						<view class="delete-image-btn"></view>
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view class="image-item">
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view bind:tap="uploadImage" class="upload-btn"></view>
+				</view>
+			</view>
+
+			<view class="upload-content">
+				<view class="upload-label">事故责任认定书</view>
+				<view class="image-container">
+					<view class="image-item">
+						<view class="delete-image-btn"></view>
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view class="image-item">
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view class="image-item">
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view class="image-item">
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view class="image-item">
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view bind:tap="uploadImage" class="upload-btn"></view>
+				</view>
+			</view>
+			<view class="should_know">
+				<checkbox-group bindchange="checkXuzhi">
+				  <label class="checkbox">
+				  	<view class='check-input {{checkXuzhi?"check-input-active":""}}'></view>
+				    <checkbox value="" checked="" style="opacity:0;"/>本人已阅读并同意
+				  </label>
+				   <text class="link"  bind:tap="showXuzhi">《投保须知》</text><text class="link"   bind:tap="showTiaokuan">《保险条款》</text>中的全部内容
+				</checkbox-group>
+			</view>
+			<view style="padding-bottom:20rpx;">
+				<button class='lipei-submit PFM' bind:tap="toLipieDetails">确认提交</button><!--可点击状态添加class：lipei-submit-active-->
+			</view>
+		</view>
+	</view>
+
+	<xuzhi hiddenXuzhi='{{showXuzhi}}'></xuzhi>
+	<tiaokuan hiddenTiaokuan='{{showTiaokuan}}'></tiaokuan>
+</view>
+
+

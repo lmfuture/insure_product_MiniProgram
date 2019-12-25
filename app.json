@@ -1,0 +1,81 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my"
+  ],
+  "subpackages": [
+    {
+      "root": "productA",
+      "pages": [
+        "pages/product/anxin/cryw/cryw",
+        "pages/product/anxin/anxinform/anxinform",
+        "pages/product/anxin/orderConfirm/orderConfirm",
+        "pages/product/anxin/orderDetails/orderDetails",
+        "pages/baodan/baodan",
+        "pages/jkgz/jkgz",
+        "pages/productList/productList",
+        "pages/paySuccess/paySuccess",
+        "pages/payFail/payFail"
+      ]
+    },
+    {
+      "root": "lipeiB",
+      "pages": [
+        "pages/lipeichoosebaodan/lipeichoosebaodan",
+        "pages/lipeidetails/lipeidetails",
+        "pages/lipeiinputinfo/lipeiinputinfo",
+        "pages/lipeiorder/lipeiorder",
+        "pages/lipeitijiaoinfo/lipeitijiaoinfo"
+      ]
+    },
+    {
+      "root": "othersC",
+      "pages": [
+        "pages/moredisease/moredisease",
+        "pages/yuhebao/yuhebao",
+        "pages/commonProblems/commonProblems",
+        "pages/feedback/feedback"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#f5f5f5",
+    "backgroundColorBottom": "#f5f5f5",
+    "backgroundColorTop": "#ffffff"
+  },
+  "usingComponents": {
+    "xuzhi": "/components/xuzhi/xuzhi",
+    "tiaokuan": "/components/tiaokuan/tiaokuan",
+    "problems": "/components/problems/problems",
+    "lipei": "/components/lipei/lipei",
+    "ensure": "/components/ensure/ensure",
+    "zhiye": "/components/zhiye/zhiye",
+    "kefudialog": "/components/kefudialog/kefudialog"
+  },
+  "tabBar": {
+    "color": "#959595",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "selectedColor": "#FFA600",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/image/index_icon.png",
+        "selectedIconPath": "/static/image/index_icon_select.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/static/image/my_icon.png",
+        "selectedIconPath": "/static/image/my_icon_select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

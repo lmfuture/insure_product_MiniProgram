@@ -1,0 +1,52 @@
+<!--pages/lipeichoosebaodan/lipeichoosebaodan.wxml-->
+<view class="choose-container">
+	<view class="progress-content">
+		<view class="progress-image">
+			<image class="lipei-image" src="http://file.baozhixing.com/lipei-choosebaodan.png"></image>
+		</view>
+		<view class="progress-text">
+			<view class="progress-text-active">选择保单</view>
+			<view>填写材料</view>
+			<view>提交申请</view>
+		</view>
+	</view>
+	<view class="baodan-items">
+		<view class="baodan-item" wx:for="{{baodanItems}}" bind:tap="toOrderDetails">
+			<view class='baodan-item-top border2EC'>
+				<text class="PFM productName">泰然定期寿</text>
+			</view>
+			<view class="baodan-item-centent border2EC">
+				<view class="baodan-center-left">
+					<view class="baodan-center-content-left">
+						<view class="center-left">被保人：</view>
+						<view class="center-right">小艾同学</view>
+					</view>
+
+					<view class="baodan-center-content-left">
+						<view class="center-left">保单号：</view>
+						<view class="center-right">201904021441548765</view>
+					</view>
+
+					<view class="baodan-center-content-left">
+						<view class="center-left">保障期限：</view>
+						<view class="center-right">2019-04-20 00:00:00 2019-10-19 23:59:59</view>
+					</view>
+				</view>
+				<image class="orderYhumbir" src="http://file.baozhixing.com/01bebd5ca9b268a80121416836deb5.jpg@1280w_1l_2o_100sh@3x.png"></image>
+			</view>
+
+			<view class="baodan-item-bottom">
+				<view class="applyLipei">
+					查看订单
+				</view>
+				<view class="toOrderDetails" catch:tap="toApplyLipei">
+					申请理赔
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="history_baodan">
+		历史保单
+	</view>
+</view>

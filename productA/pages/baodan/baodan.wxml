@@ -1,0 +1,41 @@
+<view class="weui-navbar" id="navbar">
+    <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on PFM' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+        </view>
+    </block>
+    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+</view>
+<view class="baodan-items">
+	<view class="baodan-item" wx:for="{{baodanItems}}" bind:tap="toOrderDetails">
+		<view class='baodan-item-top border2EC'>
+			<text class="PFM productName">泰然定期寿</text>
+			<text class="orderStatus status_class_dzf">待支付</text>
+		</view>
+		<view class="baodan-item-centent border2EC">
+			<view class="baodan-center-left">
+				<view class="baodan-center-content-left">
+					<view class="center-left">被保人：</view>
+					<view class="center-right">小艾同学</view>
+				</view>
+
+				<view class="baodan-center-content-left">
+					<view class="center-left">保单号：</view>
+					<view class="center-right">201904021441548765</view>
+				</view>
+
+				<view class="baodan-center-content-left">
+					<view class="center-left">保障期限：</view>
+					<view class="center-right">2019-04-20 00:00:00 2019-10-19 23:59:59</view>
+				</view>
+			</view>
+			<image class="orderYhumbir" src="http://file.baozhixing.com/01bebd5ca9b268a80121416836deb5.jpg@1280w_1l_2o_100sh@3x.png"></image>
+		</view>
+
+		<view class="baodan-item-bottom">
+			<view class="toOrderDetails">
+				查看详情
+			</view>
+		</view>
+	</view>
+</view>

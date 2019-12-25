@@ -1,0 +1,108 @@
+<!--pages/my/my.wxml-->
+<view class="my-container">
+	<view class="my-top">
+		<view class="my-top-tag">
+			2项保障中
+		</view>
+		<view class="bg-orange"></view>
+		<view class="my-top-contianer">
+			<view class='userInfo-content'>
+				<image class="portrait" src="http://file.baozhixing.com/kids.png"></image>
+				<view class="nick_content">
+					<view class="nick_name PFM">用户昵称</view>
+					<!--<view class="vip_tap">-->
+						<!--<view class="renzheng">-->
+							<!---->
+						<!--</view>-->
+						<!--<view>-->
+							<!--已认证-->
+						<!--</view>-->
+						<!---->
+					<!--</view>-->
+				</view>
+			</view>
+			<view class="user-meau">
+				<view class="user-meau-item" bind:tap="toBaodan">
+					<image class="meau_icon" src="http://file.baozhixing.com/baodan.png"></image>
+					<view  class="meau_text">保单</view>
+				</view>
+				<view class="user-meau-item" bind:tap="toLipei">
+					<image class="meau_icon" src="http://file.baozhixing.com/lipei.png"></image>
+					<view class="meau_text">理赔</view>
+				</view>
+				<view class="user-meau-item">
+					<button open-type="contact" send-message-title='我的' show-message-card style="display:flex;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;"></button>
+					<image class="meau_icon" src="http://file.baozhixing.com/zixunmy.png"></image>
+					<view class="meau_text">咨询</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!--<view class="ceshi_container" bind:tap="toCeShi">-->
+		<!--<view class="ceshi">-->
+			<!--<view class="ceshi-title PFM">测测你的风险，定制专属保障</view>-->
+			<!--<view class="ceshi-text">带你轻松挑保险，不花冤枉钱</view>-->
+		<!--</view>-->
+	<!--</view>-->
+
+	<view class="recomend_container">
+		<view class="recomend_title PFM">为你推荐</view>
+		<swiper class="swiper-recomend"
+		  duration="{{300}}"
+		  display-multiple-items='1'
+		  circular='{{false}}'
+		  next-margin='225rpx'
+		  previous-margin='40rpx'
+		>
+		  <block wx:for="{{productLunbo}}" wx:key="{{index}}">
+		    <swiper-item class="swiper-item">
+		    	<view class="swiper-item-content">
+		    		<view class="product-title">
+		    			<view class="product-title-tag">孝心优选</view>
+		    			<view class="product-title-text PFM">泰然定期保</view>
+		    		</view>
+		    		<view class="center-text">
+		    			确诊即赔
+		    		</view>
+		    		<text class="miaoshu">覆盖高发百种重疾，确诊即赔</text>
+		    		<view class="swiper-item-bottom">
+		    			<view class="bottom-text">
+		    				35120人已购
+		    			</view>
+		    			<view class="toDetails">
+		    				查看
+		    			</view>
+		    		</view>
+		    	</view>	
+		    </swiper-item>
+		  </block>
+		</swiper>
+	</view>
+
+	<view class="option_meau">
+    <navigator class='option_meau_item_nav' url='/othersC/pages/commonProblems/commonProblems'>
+      <view class="option_meau_item">
+        <image class="option_meau_item_image" src="http://file.baozhixing.com/my_problem.png"></image>
+        <text  class="option_meau_item_text">问题中心</text>
+      </view>
+    </navigator>
+		
+    <navigator class='option_meau_item_nav' url='/othersC/pages/feedback/feedback'>
+      <view class="option_meau_item">
+        <image class="option_meau_item_image" src="http://file.baozhixing.com/my_kefu.png"></image>
+        <text  class="option_meau_item_text">投诉反馈</text>
+      </view>
+    </navigator>
+		
+    <navigator class='option_meau_item_nav'>
+      <view class="option_meau_item">
+        <image class="option_meau_item_image" src="http://file.baozhixing.com/my_about.png"></image>
+        <text  class="option_meau_item_text">关于</text>
+      </view>
+    </navigator>
+	</view>
+
+</view>
+
+
+		

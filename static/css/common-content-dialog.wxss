@@ -1,0 +1,23 @@
+scroll-view,view{
+	box-sizing: border-box;
+}
+.content-dialog{
+	position: fixed;
+	top: 0;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	z-index: 500;
+	background:rgba(0,0,0,0.22);
+}
+.inner-content{
+	height:80%;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	border-radius:20rpx 20rpx 0px 0px;
+	padding: 0 40rpx;
+}

@@ -1,0 +1,30 @@
+<!--components/zhiye/zhiye.wxml-->
+<view class='xuzhi-container'>
+	<view class="content-dialog" hidden="{{hiddenZhiye}}"  capture-catch:touchmove="preventdefault" bind:tap="clickCloseTiaokuan"></view>
+	<view class="inner-content animated slideInUp"  hidden="{{hiddenZhiye}}">
+		<view class="xuzhi-title-content">
+			<view class="title-container">
+				<text class="xuzhi-title PFM">选择职业</text>
+				<view class="btn-close-xuzhi" bind:tap="clickCloseZhiye"></view>
+			</view>
+			
+		</view>
+		<view class="zhiye-content-text">
+			<view class="zhiye-item {{index===oneLevel.nownum?'zhiye-item-active':''}}" bindtap='oneLevelTap' data-index='{{index}}' wx:for='{{oneLevel.data}}' wx:key='item' wx:for-index='index'>
+        {{item}}
+        <view wx:if='{{index===oneLevel.nownum}}' catchtap='twoLevelTap'  data-index='{{n}}' class="two-zhiye-item {{n===twoLevel.nownum?'zhiye-item-active':''}}" wx:for='{{twoLevel.data}}' wx:key='item' wx:for-index='n'>
+        {{item}}
+          <view wx:if='{{n===twoLevel.nownum}}' catchtap='threeLevelTap'  data-index='{{i}}' class="three-zhiye-item {{i===threeLevel.nownum?'zhiye-item-active':''}}" wx:for='{{threeLevel.data}}' wx:key='item' wx:for-index='i'>
+          {{item}}
+            <view wx:if='{{i===threeLevel.nownum}}' catchtap='fourLevelTap'  data-index='{{j}}' class="four-zhiye-item {{j===fourLevel.nownum?'zhiye-item-active':''}}" wx:for='{{fourLevel.data}}' wx:key='item' wx:for-index='j'>
+            <view class='levelName'>{{item.name}}</view><view class='levelStyle'>{{item.style}}</view>
+            <text class='paddingLeft'></text>
+            <text class='paddingRight'></text>
+            </view>
+          </view>
+			  </view>
+			</view>			
+		</view>
+	</view>
+</view>
+

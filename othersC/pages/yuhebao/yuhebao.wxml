@@ -1,0 +1,176 @@
+<!--pages/yuhebao/yuhebao.wxml-->
+<scroll-view class="container" scroll-into-view="{{scrollToElement}}" scroll-y scroll-with-animation="{{true}}">
+	<view class='yuhebao-intruc animated fadeInUp'>
+		<image class="intruc-service-person" src="http://file.baozhixing.com/Group@2x.png"></image>
+		<view class="intruc-title">我是您的小保顾问，回答下面几个问题， 让我来帮您选产品吧！</view>
+	</view>
+
+	<!--性别-->
+	<view class="leftWhite animated fadeInUp">
+		<text class="problem">请问被保人的性别是？</text>
+		<view class="sex-items">
+			<view class="sex-man {{sexResult=='男'?'btn_active':''}}" bind:tap="showSexResult" data-sex='男'>男</view>
+			<view class="sex-woman  {{sexResult=='女'?'btn_active':''}}"  bind:tap="showSexResult" data-sex='女'>女</view>
+		</view>
+	</view>
+	<!--选择性别的结果-->
+	<view class="choose-sex animated fadeInUp" hidden="{{showSexResult}}">
+		<view class="rightYellow">
+			被保人性别：{{sexResult}}
+		</view>
+	</view>
+
+
+
+	<!-- 被保人出生年月 -->
+	<view class="leftWhite animated fadeInUp delay-05"  hidden="{{showSexResult}}">
+		<text class="problem">请告诉保保被保人是哪年出生的？</text>
+		<view class="section">
+		  <picker
+		    mode="date"
+		    value="{{birthdayDate}}"
+		    start="1900"
+		    end="{{endBirthdayYear}}"
+		    bindchange="bindDateChange"
+		    fields='year'
+		    disabled="{{birthdayDate!=null}}"
+		  >
+		    <view class="pickerBirth {{birthdayDate==null?'':'btn_active'}}">
+		      {{birthdayDate==null?"请选择":birthdayDate}}
+		    </view>
+		  </picker>
+		</view>
+	</view>
+	<!-- 出生年月选择结果 -->
+	<view class="bbrBir animated fadeInUp" hidden="{{birthdayDate==null}}">
+		<view class="rightYellow">
+			被保人出生年份：{{birthdayDate}}
+		</view>
+	</view>
+
+	<!-- 根据出生年月选择疾病的种类 -->
+	<view class="jibing-content leftWhite animated fadeInUp delay-05" hidden="{{birthdayDate==null}}" id="jibingContent">
+		<text class="problem">请如实告知保保被保人有没有患过这些疾病？据本保保所知，80%都遇到过以下疾病 可多选：</text>
+		<view class="jibing-items">
+			<block wx:for="{{initArr}}" wx:key="{{index}}">
+				<view bind:tap="selectItem" data-index='{{index}}' toggle="{{item.toggle}}" class="jibing-item {{item.toggle==true?'btn_active':''}}" data-name='{{item.name}}'>{{item.name}}</view>
+			</block>
+		</view>
+
+		<view class="jibing-bottom">
+			<view class="qita" bind:tap="toMoreDisease">其他疾病</view>
+			<view class='selectAll' bind:tap="showSelectResult">选好了</view>
+		</view>
+	</view>
+
+	<!--防止跳跃-->
+	<view class="result-jibing" hidden="{{!selectResult}}">
+		<view class="rightYellow" style="display:initial;background:#f5f5f5;height:200rpx;">
+			<view style="margin-bottom:20rpx;"></view>
+		</view>
+	</view>
+
+	<!-- 疾病的选择结果 -->
+	<view class="result-jibing animated fadeInUp" hidden="{{selectResult}}" id="result-jibing">
+		<view class="rightYellow" style="display:initial;">
+			<view style="margin-bottom:20rpx;">被保人患有：</view>
+			<block wx:for="{{selectArr}}" wx:key="{{index}}">
+				<view class="huanbing-item">{{item}}</view>
+			</block>
+		</view>
+	</view>
+	
+	<!-- 针对问题提出相应的问题（示例：问题一） -->
+	<view class="problem1">
+		<view class="leftWhite animated fadeInUp delay-05"  hidden="{{selectResult}}">
+			<text class="problem">小保将就您每个既往病史问不超过3个问题，要根据实际情况如实回答嗷！</text>
+		</view>
+
+		<view class="leftWhite animated fadeInUp delay-05"  hidden="{{selectResult}}">
+			<text class="problem">下面是关于<text class='problem-item-jibing'>甲状腺结节</text>的问题</text>
+		</view>
+
+		<view class="leftWhite animated fadeInUp"   hidden="{{selectResult}}" id="problem1Result">
+			<text class="problem">您的甲状腺结节是不是已经治愈了呢？</text>
+			<view class="sex-items">
+				<view class="sex-man {{problem1Result=='是'?'btn_active':''}}" bind:tap="showProblem1Result" data-sex='是'>是</view>
+				<view class="sex-woman  {{problem1Result=='否'?'btn_active':''}}"  bind:tap="showProblem1Result" data-sex='否'>否</view>
+			</view>
+		</view>
+
+		<view class="choose-sex animated fadeInUp" hidden="{{showProblem1Result}}">
+			<view class="rightYellow">
+				{{problem1Result}}
+			</view>
+		</view>
+	</view>
+
+	<!-- 结果提示 -->
+	<view class="leftWhite animated fadeInUp delay-05"  hidden="{{showProblem1Result}}" style="margin-bottom:80rpx;">
+		<text class="problem">结果出来啦！以下结果仅供参考，投保前仍需仔细阅读健康告知以确定是否可承保！</text>
+	</view>
+
+
+	<!-- 针对预核保出来的结果推荐相应的保险产品 -->
+	<view class="recommend_container animated fadeInUp delay-1s" hidden="{{showProblem1Result}}">
+		<view class="recommend_title">
+			<text class="title_text PFM">核保结果</text>
+			<view class='reset_hebao'>再测一次</view>
+			<image class="intruc-service-person" style="left:40rpx;" src="http://file.baozhixing.com/kefusecond.png"></image>
+		</view>
+
+		<view class="recommend_content">
+			<view class="recomend_resolve dottedLine">
+				<view class="resolve_item">
+					<text class="resolve_item_title PFM">心电图异常、心率失常：</text>
+					<text>根据被保险人目前的健康状康，重大疾病保险承保可能性较低，建议投保防癌险。</text>
+				</view>
+				<view class="resolve_item">
+					<text class="resolve_item_title PFM">心电图异常、心率失常：</text>
+					<text>根据被保险人目前的健康状康，重大疾病保险承保可能性较低，建议投保防癌险。</text>
+				</view>
+				<view class="resolve_item">
+					<text class="resolve_item_title PFM">心电图异常、心率失常：</text>
+					<text>根据被保险人目前的健康状康，重大疾病保险承保可能性较低，建议投保防癌险。</text>
+				</view>
+			</view>
+
+			<view class="recomend_products dottedLine">
+				<view class="products_title PFM">推荐投保方案</view>
+				<view class="products_lists">
+					<block wx:for="{{recomend_products}}" wx:key="{{index}}">
+						<view class="products_list">
+							<image class="product_image" src="http://file.baozhixing.com/kids.png"></image>
+							<view class="product_info">
+								<view class="product_title PFM">泰然定期寿</view>
+								<view class="product_tags">
+									<view class="product_tag" wx:for="{{[1,2,3]}}">确诊即赔</view>
+								</view>
+
+								<view class="product_price">
+									<view>
+										<text class="text1">¥</text>
+										<text class="text2 PFM">775.00</text>
+										<text class="text3">起</text>
+									</view>
+									<view class="product_sale">
+										35120人已购
+									</view>
+								</view>
+							</view>
+						</view>
+					</block>
+				</view>
+			</view>
+
+			<view class="recomend_bottom">
+				<text class="recomend_tip">如果对核保结果仍有疑问，可以预约专属客服</text>
+				<view class="yuyue">
+					预约客服
+				</view>
+			</view>
+		</view>
+	</view>
+
+	
+</scroll-view>

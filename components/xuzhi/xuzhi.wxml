@@ -1,0 +1,36 @@
+<!--components/xuzhi/xuzhi.wxml-->
+<!-- animation="{{animationData}}"-->
+<view class='xuzhi-container'>
+	<view class="content-dialog" hidden="{{hiddenXuzhi}}"  capture-catch:touchmove="preventdefault" bind:tap="clickCloseXuzhi"></view>
+	<view class="inner-content animated slideInUp"  hidden="{{hiddenXuzhi}}"><!--animation="{{animationData}}"-->
+		<view class="xuzhi-title-content">
+			<text class="xuzhi-title PFM">投保须知{{mya}}</text>
+			<text class="xuzhi-zhu">注：具体以电子保单和条款为准</text>
+			<view class="btn-close-xuzhi" bind:tap="clickCloseXuzhi"></view>
+		</view>
+		<view class="xuzhi-content-text">
+			<view>1. 本产品适用条款《和泰泰然人生定期寿险条款》 （和泰寿报&#912017]164号），承保公司和销售主体均 为和泰人寿保险股份有限公司。</view>
+			<view>
+				2. 本产品仅提供电子保单。根据《中华人民共和国合 同法》第十一条规定，数据电文是合法的合同表现 形式，电子保单与纸质保单具有
+			</view>
+			<view>
+				3. 完整填写。如有不如实告知，保 险公司有权按照《保险法》规定及保险合同约定解 除合同，并对保险合同解除前发生的保险事故
+			</view>
+			<view>
+				4. 完整填写。如有不如实告知，保 险公司有权按照《保险法》规定及保险合同约定解 除合同，并对保险合同解除前发生的保险事故
+			</view>
+			<view>
+				5. 完整填写。如有不如实告知，保 险公司有权按照《保险法》规定及保险合同约定解 除合同，并对保险合同解除前发生的保险事故
+			</view>
+			<view>
+				6. 完整填写。如有不如实告知，保 险公司有权按照《保险法》规定及保险合同约定解 除合同，并对保险合同解除前发生的保险事故
+			</view>
+			<view>
+				7. 完整填写。如有不如实告知，保 险公司有权按照《保险法》规定及保险合同约定解 除合同，并对保险合同解除前发生的保险事故
+			</view>
+			<view>
+				8. 完整填写。如有不如实告知，保 险公司有权按照《保险法》规定及保险合同约定解 除合同，并对保险合同解除前发生的保险事故
+			</view>
+		</view>
+	</view>
+</view>

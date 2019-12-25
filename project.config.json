@@ -1,0 +1,194 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.5",
+	"appid": "wx27efb20b5b7280c9",
+	"projectname": "instar",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "xuzhi",
+					"pathName": "components/xuzhi/xuzhi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "jkgz",
+					"pathName": "productA/pages/jkgz/jkgz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "anixnform",
+					"pathName": "productA/pages/product/anxin/anxinform/anxinform",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "orderConfirm",
+					"pathName": "productA/pages/product/anxin/orderConfirm/orderConfirm",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "orderDetails",
+					"pathName": "productA/pages/product/anxin/orderDetails/orderDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "baodan",
+					"pathName": "productA/pages/baodan/baodan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "productList",
+					"pathName": "productA/pages/productList/productList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "lipiechoosebaodan",
+					"pathName": "lipeiB/pages/lipeichoosebaodan/lipeichoosebaodan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "lipei",
+					"pathName": "lipeiB/pages/lipeiinputinfo/lipeiinputinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "lipei",
+					"pathName": "lipeiB/pages/lipeitijiaoinfo/lipeitijiaoinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "lipeiorder",
+					"pathName": "lipeiB/pages/lipeiorder/lipeiorder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "lipeidetails",
+					"pathName": "lipeiB/pages/lipeidetails/lipeidetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "yuhebao",
+					"pathName": "othersC/pages/yuhebao/yuhebao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 15,
+					"name": "moredisease",
+					"pathName": "othersC/pages/moredisease/moredisease",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "commonProblems",
+					"pathName": "othersC/pages/commonProblems/commonProblems",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "feedback",
+					"pathName": "othersC/pages/feedback/feedback",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "支付成功",
+					"pathName": "productA/pages/paySuccess/paySuccess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "kefuDialog",
+					"pathName": "components/kefudialog/kefudialog",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "paySuccess",
+					"pathName": "productA/pages/paySuccess/paySuccess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 20,
+					"name": "sss",
+					"pathName": "productA/pages/product/anxin/cryw/cryw",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

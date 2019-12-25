@@ -1,0 +1,74 @@
+<!--components/xuzhi/xuzhi.wxml-->
+<!-- animation="{{animationData}}"-->
+<view class='xuzhi-container'>
+	<view class="content-dialog" hidden="{{hiddenLipei}}"  capture-catch:touchmove="preventdefault" bind:tap="clickCloseLipei"></view>
+	<view class="inner-content animated slideInUp"  hidden="{{hiddenLipei}}">
+		<view class="xuzhi-title-content">
+			<text class="xuzhi-title PFM">理赔详情</text>
+			<view class="btn-close-xuzhi" bind:tap="clickCloseLipei"></view>
+		</view>
+		<view class="xuzhi-content-text">
+			<view>
+				<view class="problems-item">
+					<view class="question">
+						<view class="question-icon PFM">
+							1
+						</view>
+						<view class="question-text PFM">
+							第一步：申请报案
+						</view>
+					</view>
+					<view class="answer">
+						<view class="lipei-text-container">
+							<text class="lipei-text">您可以通过以下方式报案：\n电话报案：请致电4008-820-820进行报案 \n微信报案：通过公众号报案
+							</text>
+						</view>
+					</view>
+				</view>
+
+				<view class="problems-item">
+					<view class="question">
+						<view class="question-icon PFM">
+							2
+						</view>
+						<view class="question-text PFM">
+							第二步：提交理赔资料
+						</view>
+					</view>
+					<view class="answer">
+						<view class="lipei-text-container">
+							<text class="lipei-text">根据保险公司要求，我们将发给您索赔指引邮件， 告知您寄送地址，我们也可协助您完成影像件的 预审核。
+							</text>
+						</view>
+					</view>
+				</view>
+
+				<view class="problems-item">
+					<view class="question">
+						<view class="question-icon PFM">
+							3
+						</view>
+						<view class="question-text PFM">
+							第二步：完成索赔
+						</view>
+					</view>
+					<view class="answer">
+						<view class="lipei-text-container">
+							<text class="lipei-text">理赔款将在结案后的1-2工作日到账，为保证到账 时效，请提供收款账户。
+							</text>
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<view>
+				<view class="lipei-cailiao-title PFM">
+					理赔材料准备
+				</view>
+				<text>在治疗过程中，请妥善保管一下证明文件和资料： \n1. 填写并上传理赔申请书 \n2. 投被保险人身份证明正反复印件 \n3. 被保险人银行卡复印件 \n4. 病历票据资料原件出院小结、住院发票原件、住 5. 院费用总清单原件 \n6. 意外事故责任认定书 \n7. 其他资料</text>
+			</view>
+
+		</view>
+		
+	</view>
+</view>

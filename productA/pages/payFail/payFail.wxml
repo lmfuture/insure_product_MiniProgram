@@ -1,0 +1,16 @@
+<!--productA/pages/payFail/payFail.wxml-->
+<view class='payStateView'>
+  <view class='payState'>
+    <view class='payStateIcon'>
+      <image src='http://file.baozhixing.com/paystatefail.png'></image>
+      <text>支付失败</text>
+    </view>
+    <view class='payMoney'>{{countNUM?countNUM:''}}</view>
+    <view class='payHint'>订单将为您保留24小时，逾期系统将自动取消订单</view>
+  </view>
+  <view class='payStateBtn'>
+    <view class='payStateMessage'>订单详情</view>
+    <view class='payStateBack' bindtap='backIndex'>返回首页</view>
+  </view>
+</view>
+

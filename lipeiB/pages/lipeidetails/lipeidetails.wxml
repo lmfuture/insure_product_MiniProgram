@@ -1,0 +1,175 @@
+<!--pages/lipeidetails/lipeidetails.wxml-->
+<view class="lipei-detils">
+	<view class="lipei-pro">
+		<view class="product-info">
+			<view class="productName" bind:tap="showAnimate">泰然定期寿</view>
+			<view class="ticket">
+				<text class="ticket_no">保单号：PEID20191101090014533</text>
+				<text class="fuzhi_ticket">复制</text>
+			</view>
+		</view>
+		<view class="jidu-content">
+			<view class="jidu-item weitongguo dot-active">
+				<text class="jidu-item-title PFM">初审未通过</text>
+				<text class="jidu-item-text">身份证上传图片与被保人信息不符，请修改后重新上传 全都留两行的字</text>
+			</view>
+
+			<view class="jidu-item dot-common">
+				<text class="jidu-item-title PFM">初审未通过</text>
+				<text class="jidu-item-text">身份证上传图片与被保人信息不符，请修改后重新上传 全都留两行的字</text>
+			</view>
+
+			<view class="jidu-item dot-common">
+				<text class="jidu-item-title PFM">初审未通过</text>
+				<text class="jidu-item-text">身份证上传图片与被保人信息不符，请修改后重新上传 全都留两行的字</text>
+			</view>
+		</view>
+	</view>
+
+	<view class="form-content">
+		<view class="info-content">
+			<view class="form-title-common">基本信息</view>
+			<view class="form-input-item">
+				<view class="form-input-label">保障期限</view>
+				<view class="form-input-value">
+					<input class="form-input" disabled value='2019-04-17至2020-04-17' name="" placeholder-class="placeholderColor" placeholder="请填写与身份证件相符的姓名"/>
+				</view>
+			</view>
+			<view class="form-input-item">
+				<view class="form-input-label">投保人</view>
+				<view class="form-input-value">
+					<input class="form-input" disabled value='小王' name="" placeholder-class="placeholderColor" />
+				</view>
+			</view>
+			<view class="form-input-item">
+				<view class="form-input-label">被保人</view>
+				<view class="form-input-value">
+					<input class="form-input" disabled value='小王' name="" placeholder-class="placeholderColor"/>
+				</view>
+			</view>
+
+			<view class="form-input-item list-item-right">
+				<view class="form-input-label">理赔类型</view>
+				<view class="form-input-value">
+					<picker class="picker-select" bindchange='bindLipeiTypeChange' range="{{lipeitypeArr}}">
+					    <view class="picker">
+					      {{lipeitypeArr[lipeitype]}}
+					    </view>
+					</picker>
+				</view>
+			</view>
+
+			<view class="form-input-item">
+				<view class="form-input-label">理赔金额</view>
+				<view class="form-input-value lipeijine">
+					<text class="lipei-price">500.00</text>元
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="form-content">
+		<view class="info-content">
+			<view class="form-title-common">时间描述</view>
+			<view class="form-input-item list-item-right">
+				<view class="form-input-label">发生时间</view>
+				<view class="form-input-value">
+					<picker
+						class="picker-select"
+					    mode="date"
+					    value="{{shigu_time}}"
+					    start="1990-01-01"
+					    end="2100-01-01"
+					    bindchange="bindShiguTime"
+					  >
+					    <view class="picker">
+						   {{shigu_time}}
+						</view>
+					</picker>
+				</view>
+			</view>
+			<view class="form-input-item">
+				<view class="form-input-label">发生地点</view>
+				<view class="form-input-value">
+					<input class="form-input" disabled value='北京亦庄' name="" placeholder-class="placeholderColor"/>
+				</view>
+			</view>
+
+			<view style="padding-bottom:30rpx;">
+				<view class="form-input-label" style="height:90rpx;">事件经过</view>
+				<view>
+					<textarea contenteditable="true" contenteditable="true" auto-height="true" class='shijian_progress' name='commentValue' placeholder='请详细描述事件经过' placeholder-style='font-size:30rpx;' value='请详细描述事件经过请详细描述事件经过请详细描述事件经过请详细描述事件经过请详细描述事件经过请详细描述事件经过请详细描述事件经过请详细描述事件经过请详细描述事件经过请详细描述事件经过请详细描述事件经过' style="width:100%;margin-left:{{detail ? '-8rpx!important;':'0rpx!important;'}}"></textarea>
+				</view>
+			</view>
+		</view>
+	</view>
+
+
+	<view class="form-content">
+		<view class="info-content">
+			<view class="form-title-common">上传材料</view>
+			<view class="upload-content border2EC">
+				<view class="upload-label">被保人身份证正反面</view>
+				<view class="image-container">
+					<view class="image-item">
+						<view class="delete-image-btn"></view>
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view class="image-item">
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view bind:tap="uploadImage" class="upload-btn"></view>
+				</view>
+			</view>
+
+
+			<view class="upload-content border2EC">
+				<view class="upload-label">门诊病历（封面及医生诊断书）</view>
+				<view class="image-container">
+					<view class="image-item">
+						<view class="delete-image-btn"></view>
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view class="image-item">
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view bind:tap="uploadImage" class="upload-btn"></view>
+				</view>
+			</view>
+
+			<view class="upload-content">
+				<view class="upload-label">事故责任认定书</view>
+				<view class="image-container">
+					<view class="image-item">
+						<view class="delete-image-btn"></view>
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view class="image-item">
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view class="image-item">
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view class="image-item">
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view class="image-item">
+						<image class="image-item-image" src="http://file.baozhixing.com/kids.png"></image>
+					</view>
+					<view bind:tap="uploadImage" class="upload-btn"></view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="lipei-details-footer">
+		<view class="call-phone">
+			如有疑问请拨打<text class="telPhone" bind:tap="telPhone">4008-812-812</text>
+		</view>
+
+		<view class="footer-options">
+			<view class='chexiao'>撤销理赔</view>
+			<view class="resetlipei">修改资料</view>
+		</view>
+	</view>	
+</view>

@@ -1,0 +1,2 @@
+/* pages/product/anxin/orderDetails/orderDetails.wxss */
+@import "/static/css/orderDetails.wxss";

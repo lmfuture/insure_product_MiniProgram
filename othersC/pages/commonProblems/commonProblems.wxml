@@ -1,0 +1,138 @@
+<view class="weui-navbar" id="navbar">
+    <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on PFM' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+        </view>
+    </block>
+    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+</view>
+
+<view class="problems_container">
+    <view class="problems-item">
+        <view class="question">
+            <view class="question-icon PFM">
+                Q
+            </view>
+            <view class="question-text PFM">
+                投保流程是怎样的呢?
+            </view>
+        </view>
+
+        <view class="answer clearfix">
+            <view class="answer-icon PFM">
+                A
+            </view>
+            <view class="answer-text">
+                预约后由健康险专员为您详细解答相关问题,确认购买意向后在慧确认购买意向后在慧确认购买意向后在慧
+            </view>
+        </view>
+    </view>
+
+    <view class="problems-item">
+        <view class="question">
+            <view class="question-icon PFM">
+                Q
+            </view>
+            <view class="question-text PFM">
+                投保流程是怎样的呢?
+            </view>
+        </view>
+
+        <view class="answer clearfix">
+            <view class="answer-icon PFM">
+                A
+            </view>
+            <view class="answer-text">
+                预约后由健康险专员为您详细解答相关问题,确认购买意向后在慧确认购买意向后在慧确认购买意向后在慧
+            </view>
+        </view>
+    </view>
+
+    <view class="problems-item">
+        <view class="question">
+            <view class="question-icon PFM">
+                Q
+            </view>
+            <view class="question-text PFM">
+                投保流程是怎样的呢?
+            </view>
+        </view>
+
+        <view class="answer clearfix">
+            <view class="answer-icon PFM">
+                A
+            </view>
+            <view class="answer-text">
+                预约后由健康险专员为您详细解答相关问题,确认购买意向后在慧确认购买意向后在慧确认购买意向后在慧
+            </view>
+        </view>
+    </view>
+
+    <view class="problems-item">
+        <view class="question">
+            <view class="question-icon PFM">
+                Q
+            </view>
+            <view class="question-text PFM">
+                投保流程是怎样的呢?
+            </view>
+        </view>
+
+        <view class="answer clearfix">
+            <view class="answer-icon PFM">
+                A
+            </view>
+            <view class="answer-text">
+                预约后由健康险专员为您详细解答相关问题,确认购买意向后在慧确认购买意向后在慧确认购买意向后在慧
+            </view>
+        </view>
+    </view>
+
+    <view class="problems-item">
+        <view class="question">
+            <view class="question-icon PFM">
+                Q
+            </view>
+            <view class="question-text PFM">
+                投保流程是怎样的呢?
+            </view>
+        </view>
+
+        <view class="answer clearfix">
+            <view class="answer-icon PFM">
+                A
+            </view>
+            <view class="answer-text">
+                预约后由健康险专员为您详细解答相关问题,确认购买意向后在慧确认购买意向后在慧确认购买意向后在慧
+            </view>
+        </view>
+    </view>
+
+    <view class="problems-item">
+        <view class="question">
+            <view class="question-icon PFM">
+                Q
+            </view>
+            <view class="question-text PFM">
+                投保流程是怎样的呢?
+            </view>
+        </view>
+
+        <view class="answer clearfix">
+            <view class="answer-icon PFM">
+                A
+            </view>
+            <view class="answer-text">
+                预约后由健康险专员为您详细解答相关问题,确认购买意向后在慧确认购买意向后在慧确认购买意向后在慧
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="problems_footer">
+    <!--微信联系客服-->
+    <image src='http://file.baozhixing.com/weixin_zixun.png' class='zixun_icon'></image>联系客服
+
+    <!--问题咨询客服-->
+    <!--<image src='http://file.baozhixing.com/zixun_wenti.png' class='zixun_icon'></image>联系客服-->
+</view>

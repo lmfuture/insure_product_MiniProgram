@@ -1,0 +1,132 @@
+<!--components/xuzhi/xuzhi.wxml-->
+<!-- animation="{{animationData}}"-->
+<view class='xuzhi-container'>
+	<view class="content-dialog" hidden="{{hiddenProblems}}"  capture-catch:touchmove="preventdefault" bind:tap="clickCloseProblems"></view>
+	<view class="inner-content animated slideInUp"  hidden="{{hiddenProblems}}">
+		<view class="xuzhi-title-content">
+			<text class="xuzhi-title PFM">常见问题</text>
+			<view class="btn-close-xuzhi" bind:tap="clickCloseProblems"></view>
+		</view>
+		<view class="xuzhi-content-text">
+			<view class="problems-item">
+				<view class="question">
+					<view class="question-icon PFM">
+						Q
+					</view>
+					<view class="question-text PFM">
+						投保流程是怎样的呢?
+					</view>
+				</view>
+
+				<view class="answer clearfix">
+					<view class="answer-icon PFM">
+						A
+					</view>
+					<view class="answer-text">
+						预约后由健康险专员为您详细解答相关问题,确认购买意向后在慧确认购买意向后在慧确认购买意向后在慧
+					</view>
+				</view>
+			</view>
+
+			<view class="problems-item">
+				<view class="question">
+					<view class="question-icon PFM">
+						Q
+					</view>
+					<view class="question-text PFM">
+						投保流程是怎样的呢?
+					</view>
+				</view>
+
+				<view class="answer clearfix">
+					<view class="answer-icon PFM">
+						A
+					</view>
+					<view class="answer-text">
+						预约后由健康险专员为您详细解答相关问题,确认购买意向后在慧确认购买意向后在慧确认购买意向后在慧
+					</view>
+				</view>
+			</view>
+
+			<view class="problems-item">
+				<view class="question">
+					<view class="question-icon PFM">
+						Q
+					</view>
+					<view class="question-text PFM">
+						投保流程是怎样的呢?
+					</view>
+				</view>
+
+				<view class="answer clearfix">
+					<view class="answer-icon PFM">
+						A
+					</view>
+					<view class="answer-text">
+						预约后由健康险专员为您详细解答相关问题,确认购买意向后在慧确认购买意向后在慧确认购买意向后在慧
+					</view>
+				</view>
+			</view>
+
+			<view class="problems-item">
+				<view class="question">
+					<view class="question-icon PFM">
+						Q
+					</view>
+					<view class="question-text PFM">
+						投保流程是怎样的呢?
+					</view>
+				</view>
+
+				<view class="answer clearfix">
+					<view class="answer-icon PFM">
+						A
+					</view>
+					<view class="answer-text">
+						预约后由健康险专员为您详细解答相关问题,确认购买意向后在慧确认购买意向后在慧确认购买意向后在慧
+					</view>
+				</view>
+			</view>
+
+			<view class="problems-item">
+				<view class="question">
+					<view class="question-icon PFM">
+						Q
+					</view>
+					<view class="question-text PFM">
+						投保流程是怎样的呢?
+					</view>
+				</view>
+
+				<view class="answer clearfix">
+					<view class="answer-icon PFM">
+						A
+					</view>
+					<view class="answer-text">
+						预约后由健康险专员为您详细解答相关问题,确认购买意向后在慧确认购买意向后在慧确认购买意向后在慧
+					</view>
+				</view>
+			</view>
+
+			<view class="problems-item">
+				<view class="question">
+					<view class="question-icon PFM">
+						Q
+					</view>
+					<view class="question-text PFM">
+						投保流程是怎样的呢?
+					</view>
+				</view>
+
+				<view class="answer clearfix">
+					<view class="answer-icon PFM">
+						A
+					</view>
+					<view class="answer-text">
+						预约后由健康险专员为您详细解答相关问题,确认购买意向后在慧确认购买意向后在慧确认购买意向后在慧
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

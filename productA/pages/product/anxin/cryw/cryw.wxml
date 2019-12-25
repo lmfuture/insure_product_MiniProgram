@@ -1,0 +1,291 @@
+<!--pages/product/anxin/cryw/cryw.wxml-->
+<view style="{{pageStype}}" >
+	<view class="product-banner">
+		<image class="banner" src="http://file.baozhixing.com/WechatIMG2099.jpeg"></image>
+	</view>
+	<view class="container">
+		<view class="product-base-info">
+			<view class="product-name PFM">泰然定期寿</view>
+			<view class='strongPoint'>
+				<view>多次赔付</view>
+				<view>性价比更高</view>
+			</view>
+			<view class="product-tag">
+				<view>
+					<text class="tag-label">承保职业</text>
+					<text class="tag-value PFM">1-3类</text>
+				</view>
+				<view>
+					<text class="tag-label">限购份数</text>
+					<text class="tag-value PFM">1份</text>
+				</view>
+				<view>
+					<text class="tag-label">承保年龄</text>
+					<text class="tag-value PFM">18-60周岁</text>
+				</view>
+			</view>
+
+			<image src="//files.huizecdn.com/file1/M00/3B/2B/wKgls1seJ1mAblGNAAAPICY-ZQM441.png" class="insurance-logo" mode="widthFix"></image>
+		</view>
+		<view class="product-plans">
+			<view class="plans-top">
+				<view class="plans-title PFM title-active">投保方案</view>
+				<view class="bfss-btn" bind:tap="showCompute">
+					保费试算
+				</view>
+			</view>
+			<view class="plan-items">
+				<view class="plan-item PFM plan-item-active">计划一</view>
+				<view class="plan-item PFM">计划二</view>
+				<view class="plan-item PFM">计划三</view>
+				<view class="plan-item PFM">计划四</view>
+			</view>
+
+			<view class="product-suportShames">
+				<view class="suportShame-item clearfix">
+					<text class="item-left">恶性肿瘤医疗保金</text>
+					<text class="item-right">30天-70周岁</text>
+				</view>
+				<view class="suportShame-item clearfix">
+					<text class="item-left">恶性肿瘤医疗保金</text>
+					<text class="item-right">30天-70周岁</text>
+				</view>
+				<view class="suportShame-item clearfix">
+					<text class="item-left">恶性肿瘤医疗保金</text>
+					<text class="item-right">30天-70周岁</text>
+				</view>
+				<view class="suportShame-item clearfix">
+					<text class="item-left">恶性肿瘤医疗保金</text>
+					<text class="item-right">30天-70周岁</text>
+				</view>
+			</view>
+
+			<view class="look-suport-detail"  bind:tap="showEnsure">
+				查看保障详情
+			</view>
+		</view>
+
+		<view class="baofei">
+			<view class='baofei-label'>保费</view>
+			<view class='baofei-label-price'>
+				<text class="renminbi-icon">¥</text>
+				<text class="baofei-price PFM">775.00</text>
+				<text class="baofei-qi">起</text>
+			</view>
+		</view>
+
+		<view class="product-choose-reason">
+			<text class="reason-title PFM">为什么要买泰然定期寿险？</text>
+			<text class="reason-item">家庭支柱无保障，沉重经济负担</text>
+			<text class="reason-item">房贷车贷还款有保障</text>
+			<text class="reason-item">一站式优质就医资源，看病不求人</text>
+		</view>
+
+		<view class="product-bgImg">
+			<image class="bgImg" mode="widthFix" src="http://file.baozhixing.com/wKgls1s5mfqAG6iqAAbZAyZHzDk788.png"></image>
+		</view>
+
+		<view class="lipei-source">
+			<view class='lipei-title PFM'>理赔流程</view>
+			<view class="lipei-grids">
+				<view class="lipei-grid">
+					<image class="grid-icon" src="http://file.baozhixing.com/shenqing.png"></image>
+					<view class="grid-text">平台申请报案</view>
+				</view>
+				
+				<view class="lipei-grid">
+					<image class="grid-icon" src="http://file.baozhixing.com/cailiao.png"></image>
+					<view class="grid-text">提交理赔材料</view>
+				</view>
+				<view class="lipei-grid">
+					<image class="grid-icon" src="http://file.baozhixing.com/peichang.png"></image>
+					<view class="grid-text">领取赔偿金</view>
+				</view>
+			</view>
+			<image class="right_icon1" src="http://file.baozhixing.com/error_right.png" mode="widthFix"></image>
+			<image class="right_icon2" src="http://file.baozhixing.com/error_right.png" mode="widthFix"></image>
+			<view class="look-suport-detail lipeiDetails" bind:tap="showLipei">
+				查看理赔详情
+			</view>
+		</view>
+	</view>
+
+	<view class='bottom-meau'>
+		<view class="meau-items" style='height:{{isIpx?"372rpx":"304rpx"}}'>
+			<view class="meau-item meau-item-after" bind:tap="showXuzhi">
+				<image class="" src="http://file.baozhixing.com/xuzhi.png"></image>
+				<text>投保须知</text>
+			</view>
+			<view class="meau-item meau-item-after"  bind:tap="showTiaokuan">
+				<image class="" src="http://file.baozhixing.com/tiaokuan.png"></image>
+				<text>保险条款</text>
+			</view>
+			<view class="meau-item"  bind:tap="showProblems">
+				<image class="" src="http://file.baozhixing.com/wenti.png"></image>
+				<text>常见问题</text>
+			</view>
+		</view>
+	</view>
+
+	<view class="product-footer {{isIpx?'fix-iphonex-button':''}}">
+		<view class="zixun">
+			<button open-type="contact" show-message-card style="display:flex;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;"></button>
+			<image class="zixun-icon" src="http://file.baozhixing.com/zixun.png"></image>
+			<!--http://file.baozhixing.com/wechat.png(微信咨询icon)-->
+			<text class='zixun-text'>咨询</text>
+		</view>
+
+		<view class="kefu" bindtap='showKefu'>
+			<image class="kefu-icon" src="http://file.baozhixing.com/kefuTel.png"></image>
+			<text class='kefu-text'>客服</text>
+		</view>
+
+		<view class="product-price-content">
+			<text class="product-price-rmb">¥</text>
+			<text class="product-price-price PFM">775.50</text>
+		</view>
+		<view class="liji-toubao"  bind:tap="showCompute">
+			立即投保
+		</view>
+	</view>
+
+
+	<!--保费试算-->
+	<view class="compute-container">
+		<view class="product-compute-dialog" hidden="{{showCompute}}" capture-catch:touchmove="preventdefault"></view>
+		<view class="product-compute animated slideInUp"  hidden="{{showCompute}}">
+			<view class="compute-title-container">
+				<view class="compute-title PFM border2EC">
+					<text>保费试算</text>
+					<view class="compute-close" bind:tap="hiddenCompute"></view>
+				</view>
+			</view>	
+			<view class="compute-items" style='bottom:{{isIpx?"168rpx":"100rpx"}}'>
+				<view class="compute-item">
+					<view class="compute-item-label">
+						恶性肿瘤给付保险金
+					</view>
+					<view class="compute-item-items">
+						<view class='compute-item-item compute-item-active'>20万</view>
+						<view class='compute-item-item'>20万</view>
+						<view class='compute-item-item'>20万</view>
+						<view class='compute-item-item'>20万</view>
+						<view class='compute-item-item'>20万</view>
+						<view class='compute-item-item'>20万</view>
+					</view>
+				</view>
+
+				<view class="compute-item">
+					<view class="compute-item-label">
+						性别
+					</view>
+					<view class="compute-item-items">
+						<view class='compute-item-item compute-item-active lengthMore3'>不明性别类型</view>
+						<view class='compute-item-item'>女</view>
+					</view>
+				</view>
+
+				<view class="compute-item">
+					<view class="compute-item-label">
+						缴费方式
+					</view>
+					<view class="compute-item-items">
+						<view class='compute-item-item compute-item-active'>10年</view>
+						<view class='compute-item-item'>20年</view>
+						<view class='compute-item-item'>30年</view>
+					</view>
+				</view>
+
+				<view class="compute-item">
+					<view class="compute-item-label">
+						保障期限
+					</view>
+					<view class="compute-item-items">
+						<view class='compute-item-item compute-item-active'>10年</view>
+						<view class='compute-item-item'>20年</view>
+						<view class='compute-item-item'>30年</view>
+						<view class='compute-item-item  lengthMore3'>保至60周岁</view>
+					</view>
+				</view>
+
+				<view class="compute-item">
+					<view class="compute-item-label">
+						恶性肿瘤给付保险金
+					</view>
+					<view class="compute-item-items">
+						<view class='compute-item-item compute-item-active'>20万</view>
+						<view class='compute-item-item'>20万</view>
+						<view class='compute-item-item'>20万</view>
+						<view class='compute-item-item'>20万</view>
+						<view class='compute-item-item'>20万</view>
+						<view class='compute-item-item'>20万</view>
+					</view>
+				</view>
+
+				<view class="compute-item">
+					<view class="compute-item-label">
+						性别
+					</view>
+					<view class="compute-item-items">
+						<view class='compute-item-item compute-item-active lengthMore3'>不明性别类型</view>
+						<view class='compute-item-item'>女</view>
+					</view>
+				</view>
+
+				<view class="compute-item">
+					<view class="compute-item-label">
+						缴费方式
+					</view>
+					<view class="compute-item-items">
+						<view class='compute-item-item compute-item-active'>10年</view>
+						<view class='compute-item-item'>20年</view>
+						<view class='compute-item-item'>30年</view>
+					</view>
+				</view>
+
+				<view class="compute-item">
+					<view class="compute-item-label">
+						保障期限
+					</view>
+					<view class="compute-item-items">
+						<view class='compute-item-item compute-item-active'>10年</view>
+						<view class='compute-item-item'>20年</view>
+						<view class='compute-item-item'>30年</view>
+						<view class='compute-item-item  lengthMore3'>保至60周岁</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+
+	<!--保费试算底部-->
+	<view class="compute-footer {{isIpx?'fix-iphonex-button':''}}" hidden="{{showCompute}}">
+		<view class="zixun">
+			<button open-type="contact" show-message-card style="display:flex;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;"></button>
+			<image class="zixun-icon" src="http://file.baozhixing.com/zixun.png"></image>
+			<!--http://file.baozhixing.com/wechat.png(微信咨询icon)-->
+			<text class='zixun-text'>咨询</text>
+		</view>
+
+		<view class="kefu" bindtap='showKefu'>
+			<image class="kefu-icon" src="http://file.baozhixing.com/kefuTel.png"></image>
+			<text class='kefu-text'>客服</text>
+		</view>
+		<view class="product-price-content">
+			<text class="product-price-rmb">¥</text>
+			<text class="product-price-price PFM">775.50</text>
+		</view>
+		<view class="liji-toubao" bind:tap="toJkgz">
+			立即投保
+		</view>
+	</view>
+
+	<!--投保须知-->
+	<xuzhi hiddenXuzhi='{{showXuzhi}}'></xuzhi>
+	<tiaokuan hiddenTiaokuan='{{showTiaokuan}}'></tiaokuan>
+	<problems hiddenProblems='{{showProblems}}'></problems>
+	<lipei hiddenLipei='{{showLipei}}'></lipei>
+	<ensure hiddenEnsure='{{showEnsure}}'></ensure>
+  <kefudialog hiddenKefu='{{showKefu}}'></kefudialog>
+</view>

@@ -1,0 +1,66 @@
+<!--pages/moredisease/moredisease.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <!-- <icon class="weui-icon-search_in-box" type="search" size="14"></icon> -->
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping"/>
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="weui-cells searchbar-result" hidden="{{showTips}}">
+        	<block wx:for="{{30}}">
+        		<navigator url="" class="weui-cell" hover-class="weui-cell_active">
+	                <view class="weui-cell__bd">
+	                    <view class="text-search">{{index==0?"实时搜索文本1":"实时搜索文本"}}</view>
+	                </view>
+	            </navigator>
+        	</block>
+        </view>
+    </view>
+
+    <view class="disease-clis" hidden="{{inputShowed}}">
+    	<view class="already_select">
+    		<view class="select_items">
+    			<view class="select_item">甲状腺结节 <view class='close_this'></view></view>
+    			<view class="select_item">心脏病 <view class='close_this'></view></view>
+    			<view class="select_item">结核病 <view class='close_this'></view></view>
+    			<view class="select_item">慢性支气管炎 <view class='close_this'></view></view>
+    			<view class="select_item">肺炎（SARS除外） <view class='close_this'></view></view>
+    			<view class="select_item">肝胆外科 <view class='close_this'></view></view>
+    		</view>
+    	</view>
+    </view>
+
+    <view class="alldis_container"  hidden="{{inputShowed}}">
+    	<view class="alldis-con-left">
+    		<block wx:for="{{20}}">
+    			<view class="alldis-left-item {{index==3?'alldis-left-item-active':''}}">呼吸内科</view>
+    		</block>
+    	</view>
+    	<view class="alldis-con-right">
+    		<block wx:for="{{20}}">
+    			<view class="alldis-right-item {{index==5?'alldis-right-item-active':''}}">急性气管炎/急性支气管炎</view>
+    		</block>
+    	</view>
+    </view>
+
+
+    <view class="select_footer" hidden="{{inputShowed}}">
+    	<view class="select_footer_left">
+    		重置
+    	</view>
+    	<view class="select_footer_right">
+    		完成
+    	</view>
+    </view>
+</view>

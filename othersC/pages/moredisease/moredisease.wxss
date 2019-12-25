@@ -1,0 +1,227 @@
+/* pages/moredisease/moredisease.wxss */
+
+.weui-search-bar{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	border:none!important;
+	background: #fff;
+	padding: 20rpx 40rpx 10rpx;
+	z-index: 3000;
+}
+.weui-search-bar__form,.weui-search-bar__box{
+	height: 70rpx;
+	width: 100%;
+	border:none!important;
+}
+.weui-search-bar__label{
+	background: #F5F5F5!important;
+	border-radius: 35rpx;
+	line-height: 70rpx;
+}
+.weui-search-bar__box{
+	background: #F5F5F5!important;
+	border-radius: 35rpx;
+	line-height: 70rpx;
+}
+.weui-search-bar__input{
+	height: 70rpx;
+	line-height: 70rpx;
+	font-size: 28rpx;
+}
+.weui-search-bar__text{
+	line-height: 70rpx;
+}
+.weui-search-bar__cancel-btn{
+	line-height: 70rpx;
+	color: #185DD0;
+	font-size: 32rpx;
+}
+.weui-search-bar__box{
+	padding: 0 40rpx;
+}
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+    padding-top: 100rpx;
+}
+.searchbar-result:before{
+    display: none;
+}
+
+.text-search{
+	font-size: 32rpx;
+	color: #636363;
+}
+.weui-cells:after{
+	border-bottom: 2rpx solid #ECECEC;
+	left: 40rpx;
+	right: 40rpx;
+}
+.weui-cell::before{
+	content:"";
+	right: 40rpx;
+	left: 40rpx;
+	border-top:none;
+	border-bottom: 2rpx solid #ECECEC;
+}
+.weui-cell {
+	padding: 0 40rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	font-size: 32rpx;
+}
+.weui-cell_active{
+	background-color: #f5f5f5;
+}
+/*.page__bd{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2000;
+	bottom: 0;
+}*/
+.disease-clis{
+	padding-top: 100rpx;
+}
+.already_select{
+	width: 100%;
+	padding:20rpx 0rpx 30rpx 40rpx;
+	position: relative;
+}
+.already_select::after{
+	content:"";
+	position: absolute;
+	left: 40rpx;
+	right: 40rpx;
+	height: 2rpx;
+	background-color: #ECECEC;
+	bottom: 0;
+}
+.select_items{
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling:touch;
+	display: flex;
+	overflow-y: hidden;
+}
+.select_item{
+	font-size: 28rpx;
+
+  line-height: 34rpx;
+  flex-shrink: 0;
+  padding: 10rpx 56rpx 10rpx 30rpx;
+  background:linear-gradient(90deg,rgba(252,191,0,1) 0%,rgba(255,166,0,1) 100%);
+  color: #fff;
+  border-radius:27rpx;
+  margin-right: 30rpx;
+  position: relative;
+}
+.close_this{
+	position: absolute;
+	height: 54rpx;
+	width: 56rpx;
+	right: 0;
+	top: 0;
+	background-image: url(http://file.baozhixing.com/cancel_jibing.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20rpx 20rpx;
+}
+.alldis_container{
+	position: absolute;
+	top: 204rpx;
+	bottom:100rpx;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	line-height: 40rpx;
+	text-align: center;
+	font-size: 32rpx;
+	color: #636363;
+}
+.alldis-con-left{
+	width: 252rpx;
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling:touch;
+	border-right: 2rpx solid #ECECEC;
+}
+.alldis-con-right{
+	width: 458rpx;
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling:touch;
+}
+.alldis-left-item{
+	height: 80rpx;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 20rpx;
+	margin-bottom: 20rpx;
+}
+.alldis-left-item-active{
+	color: #282828;
+	font-family:"PingFangSC-Medium";
+	position: relative;
+}
+.alldis-left-item-active::after{
+	content:"";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 10rpx;
+	background-color: #FFA600;
+}
+
+.alldis-right-item{
+	width: 100%;
+	line-height: 40rpx;
+	padding: 30rpx 0 30rpx 36rpx;
+	border-bottom: 2rpx solid #ECECEC;
+	text-align: left;
+}
+.alldis-right-item:last-child{
+	border-bottom: none;
+}
+.alldis-right-item-active{
+	color: #FFA600;
+	font-family:"PingFangSC-Medium";
+}
+.select_footer{
+	height: 100rpx;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	flex-flow: row nowrap;
+}
+.select_footer_left,.select_footer_right{
+	height: 100rpx;
+	width: 50%;
+	font-size: 36rpx;
+	line-height: 100rpx;
+	text-align: center;
+}
+.select_footer_left{
+	color: #9E9E9E;
+	border-top: 2rpx solid #ECECEC;
+}
+.select_footer_right{
+	color: #FFFFFF;
+	border-top: 2rpx solid #FCBF00;
+	background:linear-gradient(90deg,rgba(252,191,0,1) 0%,rgba(255,166,0,1) 100%);
+}
+
+
+
+
+
+

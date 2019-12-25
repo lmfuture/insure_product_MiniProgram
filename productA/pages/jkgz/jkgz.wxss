@@ -1,0 +1,79 @@
+/* pages/jkgz/jkgz.wxss */
+.top-tip{
+	padding: 20rpx 40rpx;
+	background-color: #F5F5F5;
+	color: #F43C3C;
+	font-size: 28rpx;
+	line-height: 34rpx;
+}
+.jkgz-title{
+	padding: 30rpx 0 20rpx;
+	font-size: 28rpx;
+}
+.jkgz-text{
+	font-size: 28rpx;
+	color: #636363;
+}
+.container{
+	padding-bottom: 150rpx;
+}
+
+.jkgz-footer{
+	height: 100rpx;
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+}
+.zixun{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 128rpx;
+	padding-top: 12rpx;
+	position: relative;
+	border-top: 2rpx solid #ececec;
+}
+.zixun-icon{
+	height: 44rpx;
+	width: 44rpx;
+}
+.zixun-text{
+	font-size: 24rpx;
+	line-height: 40rpx;
+	color: #282828;
+}
+.zixun::after{
+	position: absolute;
+	content: "";
+	right: 0;
+	top: 20rpx;
+	height: 60rpx;
+	width: 2rpx;
+	background-color: #ECECEC;
+}
+.product-price-content{
+	display: flex;
+	width: 289rpx;
+	border-top: 2rpx solid #ececec;
+	align-items: center;
+	justify-content: center;
+	font-size: 36rpx;
+	color: #636363;
+}
+
+.liji-toubao{
+	display: flex;
+	width: 336rpx;
+	justify-content: center;
+	align-items: center;
+	font-size: 36rpx;
+	color: #fff;
+	line-height: 100rpx;
+	background:linear-gradient(90deg,rgba(252,191,0,1) 0%,rgba(255,166,0,1) 100%);
+	border-top: 2rpx solid #FCBF00;
+}

@@ -1,0 +1,130 @@
+/*产品列表*/
+.poroductLists{
+	padding-top: 40rpx;
+	padding-bottom: 30rpx;	
+}
+.product-item{
+	width: 100%;
+	height: 286rpx;
+	box-shadow:0rpx 10rpx 30rpx 0rpx rgba(0,0,0,0.12);
+	border-radius:20rpx;
+	display: flex;
+	flex-direction: row;
+	padding: 20rpx 20rpx;
+	justify-content: space-between;
+	margin-bottom: 30rpx;
+}
+.product-item-left,.product-item-right{
+	display: flex;
+	flex-direction: column;
+}
+.product-item-left{
+	width: 140rpx;
+	align-items: center;
+}
+.product-item-right{
+	width: 470rpx;
+	align-items: flex-start;
+}
+.product-thumb-container{
+	width: 140rpx;
+	height: 140rpx;
+	position: relative;
+}
+.product-remai,.product-xinpin{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 6rpx 10rpx;
+	font-size: 24rpx;
+	color: #fff;
+	line-height:30rpx;
+	border-radius:0px 10rpx 0px 10rpx;
+}
+.product-remai{
+	background:linear-gradient(90deg,rgba(247,161,66,1) 0%,rgba(235,104,31,1) 100%);
+}
+.product-xinpin{
+	background:linear-gradient(90deg,rgba(112,118,252,1) 0%,rgba(24,93,208,1) 100%);
+}
+.product-item-left .product-thumb{
+	width: 140rpx;
+	height: 140rpx;
+	border-radius:10rpx;
+}
+.product-insurance-logo{
+	width: 92rpx;
+	margin-top: 10rpx;
+}
+.product-title{
+	height:44rpx;
+	font-size:36rpx;
+	font-weight:500;
+	color:rgba(40,40,40,1);
+	line-height:44rpx;
+}
+.product-tags{
+	display: flex;
+	flex-flow: row nowrap;
+	margin-top: 10rpx;
+	margin-bottom: 20rpx;
+}
+.product-tag{
+	font-size: 20rpx;
+	height: 32rpx;
+	line-height: 32rpx;
+	padding: 0rpx 10rpx;
+	border-radius:10rpx;
+	border:2rpx solid #F48A29;
+	color: #F48A29;
+	margin-right: 20rpx;
+	box-sizing: border-box;
+}
+.product-introduce{
+	font-size:24rpx;
+	color:#9E9E9E;
+	line-height:30rpx;
+	margin-bottom: 24rpx;
+}
+.product-right-bottom{
+	padding-top: 6rpx;
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	position: relative;
+	width: 100%;
+}
+.product-price,.product-rmb,.product-qi{
+	display: flex;
+}
+.product-rmb{
+	font-size:24rpx;
+	color: #F43C3C;
+	line-height:33rpx;
+}
+.product-price{
+	font-size:40rpx;
+	font-family:"PingFangSC-Medium";
+	font-weight:500;
+	color:#F43C3C;
+	line-height:40rpx;
+}
+.product-qi{
+	font-size:20rpx;
+	line-height:24rpx;
+	color: #9E9E9E;
+	margin-left: 10rpx;
+}
+.product-ceping{
+	width:116rpx;
+	height:54rpx;
+	background:linear-gradient(90deg,rgba(252,191,0,1) 0%,rgba(255,166,0,1) 100%);
+	border-radius:29rpx;
+	line-height: 54rpx;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 28rpx;
+}

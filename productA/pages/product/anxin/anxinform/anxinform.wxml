@@ -1,0 +1,199 @@
+<!--pages/product/anxin/anxinform/anxinform.wxml-->
+<form class="form-container" style='padding-bottom:{{isIpx?"168rpx":"100rpx"}}'>
+	<view class="form-title-container">
+		<view class="form-title title-active">填写投保信息</view>
+	</view>
+	<view class="form-content">
+		<view class="info-content">
+			<view class="form-title-common">投保人信息</view>
+			<view class="form-input-item">
+				<view class="form-input-label">姓名</view>
+				<view class="form-input-value">
+					<input class="form-input" name="" placeholder-class="placeholderColor" placeholder="请填写与身份证件相符的姓名" />
+				</view>
+			</view>
+			<view class="form-input-item list-item-right">
+				<view class="form-input-label">证件类型</view>
+				<view class="form-input-value">
+					<picker class="picker-select" bindchange='bindIdcardChange' value="{{index_idcard}}" range="{{array}}">
+					    <view class="picker">
+					      {{array[index_idcard]}}
+					    </view>
+					</picker>
+				</view>
+			</view>
+			<view class="form-input-item">
+				<view class="form-input-label">证件号码</view>
+				<view class="form-input-value">
+					<input class="form-input" name="" placeholder-class="placeholderColor" placeholder="请填写有效的证件号码" />
+				</view>	
+			</view>
+			<view class="form-input-item">
+				<view class="form-input-label">证件有效期</view>
+				<view class="form-input-value">
+					<checkbox-group bindchange="checkboxChange">
+					  <label class="checkbox">
+					  	<view class='check-input {{isChangQi_tbr?"check-input-active":""}}'></view>
+					    <checkbox/> <text class="checkbox-text">长期有效</text>
+					  </label>
+					</checkbox-group>
+				</view>
+			</view>
+			<view class="form-input-item  list-item-right">
+				<view class="form-input-label" style="justify-content:flex-end;">起</view>
+				<view class="form-input-value">
+					<picker
+						class="picker-select"
+					    mode="date"
+					    value="{{card_date_qi}}"
+					    start="1990-01-01"
+					    end="2100-01-01"
+					    bindchange="bindDateQiChange"
+					  >
+					    <view class="picker">
+						   {{card_date_qi}}
+						</view>
+					</picker>
+				</view>
+			</view>
+			<view class="form-input-item  list-item-right">
+				<view class="form-input-label" style="justify-content:flex-end;">止</view>
+				<view class="form-input-value">
+					<picker
+						class="picker-select"
+					    mode="date"
+					    value="{{card_date_zhi}}"
+					    start="1990-01-01"
+					    end="2100-01-01"
+					    bindchange="bindDateZhiChange"
+					  >
+					  <view class="picker">
+					    {{card_date_zhi}}
+					  </view>
+					    <!-- <input placeholder="请选择证件截止日期" value='{{card_data_zhi}}' type="text" disabled/> -->
+					</picker>
+				</view>
+			</view>
+			<view class="form-input-item">
+				<view class="form-input-label">手机号码</view>
+				<view class="form-input-value">
+					<input class="form-input" name="" placeholder-class="placeholderColor" placeholder="请填写常用的手机号" />
+				</view>
+			</view>
+			<view class="form-input-item">
+				<view class="form-input-label">电子邮箱</view>
+				<view class="form-input-value">
+					<input class="form-input" name="" placeholder-class="placeholderColor" placeholder="用于发送电子保单" />
+				</view>
+			</view>
+      <view class="form-input-item">
+				<view class="form-input-label">职业类型</view>
+				<view class="form-input-value">
+					<input class="form-input" value='{{professional}}' bindtap="chooseZhiye" name="" placeholder-class="placeholderColor" disabled placeholder="请选择职业类型" />
+				</view>
+			</view>
+		</view>
+	</view>
+
+
+	<view class="form-content">
+		<view class="info-content">
+			<view class="form-title-common">被保人信息</view>
+			<view class="form-input-item">
+				<view class="form-input-label">姓名</view>
+				<view class="form-input-value">
+					<input class="form-input" name="" placeholder-class="placeholderColor" placeholder="请填写与身份证件相符的姓名" />
+				</view>
+			</view>
+			<view class="form-input-item list-item-right">
+				<view class="form-input-label">证件类型</view>
+				<view class="form-input-value">
+					<picker class="picker-select" bindchange='bindIdcardChange' value="{{index_idcard}}" range="{{array}}">
+					    <view class="picker">
+					      {{array[index_idcard]}}
+					    </view>
+					</picker>
+				</view>
+			</view>
+			<view class="form-input-item">
+				<view class="form-input-label">证件号码</view>
+				<view class="form-input-value">
+					<input class="form-input" name="" placeholder-class="placeholderColor" placeholder="请填写有效的证件号码" />
+				</view>	
+			</view>
+			
+			<view class="form-input-item">
+				<view class="form-input-label">手机号码</view>
+				<view class="form-input-value">
+					<input class="form-input" name="" placeholder-class="placeholderColor" placeholder="请填写常用的手机号" />
+				</view>
+			</view>
+			<view class="form-input-item">
+				<view class="form-input-label">电子邮箱</view>
+				<view class="form-input-value">
+					<input class="form-input" name="" placeholder-class="placeholderColor" placeholder="用于发送电子保单" />
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="form-content">
+		<view class="info-content">
+			<view class="form-title-common">续期账户信息</view>
+			<view class="form-input-item  list-item-right">
+				<view class="form-input-label">续期银行</view>
+				<view class="form-input-value">
+					<picker class="picker-select" bindchange='bindIdcardChange' value="{{index_idcard}}" range="{{array}}">
+					    <view class="picker">
+					      {{array[index_idcard]}}
+					    </view>
+					</picker>
+				</view>
+			</view>
+
+			<view class="form-input-item">
+				<view class="form-input-label">银行卡号</view>
+				<view class="form-input-value">
+					<input class="form-input" name="" placeholder-class="placeholderColor" placeholder="请输入银行卡号" />
+				</view>
+			</view>
+
+		</view>
+	</view>
+
+	<view class="should_know">
+		<checkbox-group bindchange="checkXuzhi">
+		  <label class="checkbox">
+		  	<view class='check-input {{checkXuzhi?"check-input-active":""}}'></view>
+		    <checkbox value="" checked="" style="opacity:0;"/>本人已阅读并同意
+		  </label>
+		   <text class="link"  bind:tap="showXuzhi">《投保须知》</text><text class="link"   bind:tap="showTiaokuan">《保险条款》</text>中的全部内容
+		</checkbox-group>
+	</view>
+</form>
+
+<view class="form-footer {{isIpx?'fix-iphonex-button':''}}">
+	<view class="zixun">
+		<button open-type="contact" show-message-card style="display:flex;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;"></button>
+		<image class="zixun-icon" src="http://file.baozhixing.com/zixun.png"></image>
+		<!--http://file.baozhixing.com/wechat.png(微信咨询icon)-->
+		<text class='zixun-text'>咨询</text>
+	</view>
+
+	<view class="kefu" bindtap='showKefu'>
+			<image class="kefu-icon" src="http://file.baozhixing.com/kefuTel.png"></image>
+			<text class='kefu-text'>客服</text>
+		</view>
+	<view class="product-price-content">
+		<text class="product-price-rmb">¥</text>
+		<text class="product-price-price PFM">775.50</text>
+	</view>
+	<view class="liji-toubao" bind:tap="submitForm">
+		立即投保
+	</view>
+</view>
+
+<zhiye hiddenZhiye='{{showZhiye}}' goodid='{{goodid}}' bind:professionalValue='professionalValue'></zhiye>
+<xuzhi hiddenXuzhi='{{showXuzhi}}'></xuzhi>
+<tiaokuan hiddenTiaokuan='{{showTiaokuan}}'></tiaokuan>
+<kefudialog hiddenKefu='{{showKefu}}'></kefudialog>
