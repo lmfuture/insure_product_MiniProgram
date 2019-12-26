@@ -1,7 +1,5 @@
 git命令帮助 http://www.daqianduan.com/6399.html
 
-来自于branch分支
-
 先进行 git add
 
 git commit -m "这里是说明"
