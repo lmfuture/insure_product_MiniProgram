@@ -1,4 +1,4 @@
-//app.js
+//app.js来源于branch
 App({
   globalData: {
     userInfo: null,
