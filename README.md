@@ -1,7 +1,4 @@
-此条是分支上更新的内容
-
-上传到本地仓库 git commit 命令
-
+git命令帮助 http://www.daqianduan.com/6399.html
 
 先进行 git add
 
