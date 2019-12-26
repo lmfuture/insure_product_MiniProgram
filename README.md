@@ -2,8 +2,8 @@
 
 上传到本地仓库 git commit 命令
 
-先进行 git add
 
+先进行 git add
 
 git commit -m "这里是说明"
 
