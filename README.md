@@ -1,8 +1,5 @@
 git命令帮助 http://www.daqianduan.com/6399.html
 
-上传到本地仓库 git commit 命令
-
-
 先进行 git add
 
 git commit -m "这里是说明"
