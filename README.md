@@ -1,4 +1,4 @@
-git命令帮助 http://www.daqianduan.com/6399.html 来自branch
+git命令帮助 http://www.daqianduan.com/6399.html
 
 先进行 git add
 
